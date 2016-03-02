@@ -50,7 +50,7 @@ AVLTree::AVLTree(TreeDataCompareFunc compareFunc)
 
 AVLTree::~AVLTree()
 {
-
+    Clear();
 }
 
 size_t AVLTree::Size()
@@ -351,3 +351,17 @@ void AVLTree::PostOrderTraverse(TreeNodeHandle handle,void* userData)
     return PostOrderTraverseRecu(m_pRoot,handle,userData);
 }
 
+void AVLTree::ClearRecu(TreeNode *node)
+{
+    if(0 == node)
+        return;
+    ClearRecu(node->left);
+    ClearRecu(node->right);
+    delete node;
+    node = 0;
+}
+
+void AVLTree::Clear()
+{
+    ClearRecu(m_pRoot);
+}

@@ -71,6 +71,7 @@ class AVLTree
 		TreeNode* Root();
 		size_t Size();
 		bool Empty();
+        void Clear();
 
         // 插入节点
 		TreeNode* Insert(void* data);
@@ -83,10 +84,6 @@ class AVLTree
         void PreOrderTraverse(TreeNodeHandle handle,void* userData);
         // 后续递归遍历
         void PostOrderTraverse(TreeNodeHandle handle,void* userData);
-
-		TreeNode* Begin();
-		TreeNode* End();
-		TreeNode* Next();
 
         // 查找
 		TreeNode* Find(void* data);
@@ -109,6 +106,8 @@ class AVLTree
         void PreOrderTraverseRecu(TreeNode* node,TreeNodeHandle handle,void* userData);
         // 后续递归遍历
         void PostOrderTraverseRecu(TreeNode* node,TreeNodeHandle handle,void* userData);
+
+        void ClearRecu(TreeNode* node);
     private:
 		TreeNode* m_pRoot;
 		size_t m_nSize;
