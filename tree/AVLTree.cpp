@@ -304,35 +304,50 @@ TreeNode* AVLTree::FindRecu(void *data, TreeNode *node)
 
 }
 
-void AVLTree::MidOrderTraverseRecu(TreeNode* node,TreeNodeHandle handle)
+void AVLTree::MidOrderTraverseRecu(TreeNode* node,TreeNodeHandle handle,void* userData)
 {
     if(node == 0 )
         return;
-    MidOrderTraverseRecu(node->left,handle);
+    MidOrderTraverseRecu(node->left,handle,userData);
     if(node->hidden  == false)
-        handle(node);
-    MidOrderTraverseRecu(node->right,handle);
+        handle(userData,node);
+    MidOrderTraverseRecu(node->right,handle,userData);
 }
 
-void AVLTree::PreOrderTraverseRecu(TreeNode* node,TreeNodeHandle handle)
+void AVLTree::PreOrderTraverseRecu(TreeNode* node,TreeNodeHandle handle,void* userData)
 {
     if(node == 0)
         return;
 
     if(node->hidden  == false)
-        handle(node);
-    PreOrderTraverseRecu(node->left,handle);
-    PreOrderTraverseRecu(node->right,handle);
+        handle(userData,node);
+    PreOrderTraverseRecu(node->left,handle,userData);
+    PreOrderTraverseRecu(node->right,handle,userData);
 }
 
-void AVLTree::PostOrderTraverseRecu(TreeNode* node,TreeNodeHandle handle)
+void AVLTree::PostOrderTraverseRecu(TreeNode* node,TreeNodeHandle handle,void* userData)
 {
     if(node == 0)
         return;
-    PostOrderTraverseRecu(node->left,handle);
-    PostOrderTraverseRecu(node->right,handle);
+    PostOrderTraverseRecu(node->left,handle,userData);
+    PostOrderTraverseRecu(node->right,handle,userData);
     if(node->hidden  == false)
-        handle(node);
+        handle(userData,node);
 }
 
+
+void AVLTree::MidOrderTraverse(TreeNodeHandle handle,void* userData)
+{
+    return MidOrderTraverseRecu(m_pRoot,handle,userData);
+}
+
+void AVLTree::PreOrderTraverse(TreeNodeHandle handle,void* userData)
+{
+   return PreOrderTraverseRecu(m_pRoot,handle,userData);
+}
+
+void AVLTree::PostOrderTraverse(TreeNodeHandle handle,void* userData)
+{
+    return PostOrderTraverseRecu(m_pRoot,handle,userData);
+}
 

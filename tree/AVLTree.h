@@ -26,9 +26,13 @@ using namespace std;
 
 struct TreeNode;
 
+// 树节点数据的比较函数，如果不设置那么就默认按照指针进行比较
 typedef int (*TreeDataCompareFunc)(void* data1,void* data2);
-typedef void (*TreeNodeHandle)(TreeNode* node);
 
+// 遍历一棵树的处理函数
+typedef void (*TreeNodeHandle)(void* userData,TreeNode* node);
+
+// 树节点
 struct TreeNode
 {
 	TreeNode()
@@ -42,7 +46,9 @@ struct TreeNode
 	void* data;
 	struct TreeNode* left;
 	struct TreeNode* right;
+    // 平衡因子
 	int factor;
+    // 一个隐藏标志，删除节点的时候并不真正删除它，而是把这个节点设置为隐藏
     bool hidden;
 };
 
@@ -66,23 +72,43 @@ class AVLTree
 		size_t Size();
 		bool Empty();
 
+        // 插入节点
 		TreeNode* Insert(void* data);
+        // 删除节点
 		void Remove(void* data);
 
-        void MidOrderTraverseRecu(TreeNode* node,TreeNodeHandle handle);
-        void PreOrderTraverseRecu(TreeNode* node,TreeNodeHandle handle);
-        void PostOrderTraverseRecu(TreeNode* node,TreeNodeHandle handle);
+        // 中序递归遍历
+        void MidOrderTraverse(TreeNodeHandle handle,void* userData);
+        // 前序递归遍历
+        void PreOrderTraverse(TreeNodeHandle handle,void* userData);
+        // 后续递归遍历
+        void PostOrderTraverse(TreeNodeHandle handle,void* userData);
 
 		TreeNode* Begin();
 		TreeNode* End();
 		TreeNode* Next();
 
+        // 查找
 		TreeNode* Find(void* data);
+
 	private:
+
+        // 递归插入
         TreeNode* InsertRecu(void* data,PTreeNode& node,bool& isbalanced);
+        // 递归查找
         TreeNode* FindRecu(void* data,TreeNode* node);
+
+        // 左旋转
         void RotateLeft(PTreeNode& node);
+        // 右旋转
         void RotateRight(PTreeNode& node);
+
+        // 中序递归遍历
+        void MidOrderTraverseRecu(TreeNode* node,TreeNodeHandle handle,void* userData);
+        // 前序递归遍历
+        void PreOrderTraverseRecu(TreeNode* node,TreeNodeHandle handle,void* userData);
+        // 后续递归遍历
+        void PostOrderTraverseRecu(TreeNode* node,TreeNodeHandle handle,void* userData);
     private:
 		TreeNode* m_pRoot;
 		size_t m_nSize;

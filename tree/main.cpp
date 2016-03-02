@@ -19,7 +19,7 @@
 
 #include "AVLTree.h"
 
-void PrintNode(TreeNode* node)
+void PrintNode(void* userData,TreeNode* node)
 {
     cout << (long)node->data << " ";
 }
@@ -34,39 +34,39 @@ int main(int argc, char *argv[])
     for(int i = 0; i < 5; ++i)
         t.Insert((void*)i);*/
     t.Insert((void*)1);
-    t.PreOrderTraverseRecu(t.Root(),PrintNode);
+    t.PreOrderTraverse(PrintNode,0);
     cout << endl;
     t.Insert((void*)2);
-    t.PreOrderTraverseRecu(t.Root(),PrintNode);
+    t.PreOrderTraverse(PrintNode,0);
     cout << endl;
     t.Insert((void*)3);
-    t.PreOrderTraverseRecu(t.Root(),PrintNode);
+    t.PreOrderTraverse(PrintNode,0);
     cout << endl;
     t.Insert((void*)4);
-    t.PreOrderTraverseRecu(t.Root(),PrintNode);
+    t.PreOrderTraverse(PrintNode,0);
     cout << endl;
     t.Insert((void*)5);
-    t.PreOrderTraverseRecu(t.Root(),PrintNode);
+    t.PreOrderTraverse(PrintNode,0);
     cout << endl;
     t.Insert((void*)6);
-    t.PreOrderTraverseRecu(t.Root(),PrintNode);
+    t.PreOrderTraverse(PrintNode,0);
     cout << endl;
     t.Insert((void*)7);
     t.Insert((void*)6);
 
-    t.PreOrderTraverseRecu(t.Root(),PrintNode);
+    t.PreOrderTraverse(PrintNode,0);
     cout << endl;
     ///
     t.Remove((void*)6);
-    t.MidOrderTraverseRecu(t.Root(),PrintNode);
+    t.MidOrderTraverse(PrintNode,0);
     cout << endl;
 
     t.Remove((void*)4);
-    t.MidOrderTraverseRecu(t.Root(),PrintNode);
+    t.MidOrderTraverse(PrintNode,0);
     cout << endl;
 
     t.Remove((void*)2);
-    t.MidOrderTraverseRecu(t.Root(),PrintNode);
+    t.MidOrderTraverse(PrintNode,0);
     cout << endl;
 
 
