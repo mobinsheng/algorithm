@@ -1,0 +1,47 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+DeQueue	queue.cpp	/^QueueNode* Queue::DeQueue()$/;"	f	class:Queue	signature:()
+DeQueue	queue.h	/^		QueueNode* DeQueue();$/;"	p	class:Queue	access:public	signature:()
+Empty	queue.h	/^		bool Empty();$/;"	p	class:Queue	access:public	signature:()
+EnQueue	queue.cpp	/^void Queue::EnQueue(void* data)$/;"	f	class:Queue	signature:(void* data)
+EnQueue	queue.h	/^		void EnQueue(void* data);$/;"	p	class:Queue	access:public	signature:(void* data)
+Head	queue.h	/^		QueueNode* Head();$/;"	p	class:Queue	access:public	signature:()
+Queue	queue.cpp	/^Queue::Queue()$/;"	f	class:Queue	signature:()
+Queue	queue.h	/^		Queue();$/;"	p	class:Queue	access:public	signature:()
+Queue	queue.h	/^class Queue$/;"	c
+Queue::DeQueue	queue.cpp	/^QueueNode* Queue::DeQueue()$/;"	f	class:Queue	signature:()
+Queue::DeQueue	queue.h	/^		QueueNode* DeQueue();$/;"	p	class:Queue	access:public	signature:()
+Queue::Empty	queue.h	/^		bool Empty();$/;"	p	class:Queue	access:public	signature:()
+Queue::EnQueue	queue.cpp	/^void Queue::EnQueue(void* data)$/;"	f	class:Queue	signature:(void* data)
+Queue::EnQueue	queue.h	/^		void EnQueue(void* data);$/;"	p	class:Queue	access:public	signature:(void* data)
+Queue::Head	queue.h	/^		QueueNode* Head();$/;"	p	class:Queue	access:public	signature:()
+Queue::Queue	queue.cpp	/^Queue::Queue()$/;"	f	class:Queue	signature:()
+Queue::Queue	queue.h	/^		Queue();$/;"	p	class:Queue	access:public	signature:()
+Queue::Size	queue.h	/^		size_t Size();$/;"	p	class:Queue	access:public	signature:()
+Queue::Tail	queue.h	/^		QueueNode* Tail();$/;"	p	class:Queue	access:public	signature:()
+Queue::m_nSize	queue.h	/^		size_t m_nSize;$/;"	m	class:Queue	access:private
+Queue::m_pHead	queue.h	/^		QueueNode* m_pHead;$/;"	m	class:Queue	access:private
+Queue::m_pTail	queue.h	/^		QueueNode* m_pTail;$/;"	m	class:Queue	access:private
+Queue::~Queue	queue.cpp	/^Queue::~Queue()$/;"	f	class:Queue	signature:()
+Queue::~Queue	queue.h	/^		~Queue();$/;"	p	class:Queue	access:public	signature:()
+QueueNode	queue.h	/^	QueueNode()$/;"	f	struct:QueueNode	access:public	signature:()
+QueueNode	queue.h	/^struct QueueNode$/;"	s
+QueueNode::QueueNode	queue.h	/^	QueueNode()$/;"	f	struct:QueueNode	access:public	signature:()
+QueueNode::data	queue.h	/^	void* data;$/;"	m	struct:QueueNode	access:public
+QueueNode::next	queue.h	/^	struct QueueNode* next;$/;"	m	struct:QueueNode	typeref:struct:QueueNode::QueueNode	access:public
+QueueNode::prev	queue.h	/^	struct QueueNode* prev;$/;"	m	struct:QueueNode	typeref:struct:QueueNode::QueueNode	access:public
+Size	queue.h	/^		size_t Size();$/;"	p	class:Queue	access:public	signature:()
+Tail	queue.h	/^		QueueNode* Tail();$/;"	p	class:Queue	access:public	signature:()
+_QUEUE_H_	queue.h	2;"	d
+data	queue.h	/^	void* data;$/;"	m	struct:QueueNode	access:public
+m_nSize	queue.h	/^		size_t m_nSize;$/;"	m	class:Queue	access:private
+m_pHead	queue.h	/^		QueueNode* m_pHead;$/;"	m	class:Queue	access:private
+m_pTail	queue.h	/^		QueueNode* m_pTail;$/;"	m	class:Queue	access:private
+next	queue.h	/^	struct QueueNode* next;$/;"	m	struct:QueueNode	typeref:struct:QueueNode::QueueNode	access:public
+prev	queue.h	/^	struct QueueNode* prev;$/;"	m	struct:QueueNode	typeref:struct:QueueNode::QueueNode	access:public
+~Queue	queue.cpp	/^Queue::~Queue()$/;"	f	class:Queue	signature:()
+~Queue	queue.h	/^		~Queue();$/;"	p	class:Queue	access:public	signature:()

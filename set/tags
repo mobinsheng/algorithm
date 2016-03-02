@@ -1,0 +1,116 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AR	build-set-pro-Desktop-Debug/Makefile	/^AR            = ar cqs$/;"	m
+Begin	set.h	/^		SetNode* Begin();$/;"	p	class:Set	access:public	signature:()
+CC	build-set-pro-Desktop-Debug/Makefile	/^CC            = gcc$/;"	m
+CFLAGS	build-set-pro-Desktop-Debug/Makefile	/^CFLAGS        = -m64 -pipe -g -Wall -W -fPIE $(DEFINES)$/;"	m
+CHK_DIR_EXISTS	build-set-pro-Desktop-Debug/Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
+COMPRESS	build-set-pro-Desktop-Debug/Makefile	/^COMPRESS      = gzip -9f$/;"	m
+COPY	build-set-pro-Desktop-Debug/Makefile	/^COPY          = cp -f$/;"	m
+COPY_DIR	build-set-pro-Desktop-Debug/Makefile	/^COPY_DIR      = cp -f -R$/;"	m
+COPY_FILE	build-set-pro-Desktop-Debug/Makefile	/^COPY_FILE     = cp -f$/;"	m
+CPP	makefile	/^CPP=g++$/;"	m
+CPPFLAG	makefile	/^CPPFLAG=-g$/;"	m
+CXX	build-set-pro-Desktop-Debug/Makefile	/^CXX           = g++$/;"	m
+CXXFLAGS	build-set-pro-Desktop-Debug/Makefile	/^CXXFLAGS      = -m64 -pipe -g -Wall -W -fPIE $(DEFINES)$/;"	m
+DEFINES	build-set-pro-Desktop-Debug/Makefile	/^DEFINES       = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG$/;"	m
+DEL_DIR	build-set-pro-Desktop-Debug/Makefile	/^DEL_DIR       = rmdir$/;"	m
+DEL_FILE	build-set-pro-Desktop-Debug/Makefile	/^DEL_FILE      = rm -f$/;"	m
+DESTDIR	build-set-pro-Desktop-Debug/Makefile	/^DESTDIR       = #avoid trailing-slash linebreak$/;"	m
+DIST	build-set-pro-Desktop-Debug/Makefile	/^DIST          = \/usr\/lib\/x86_64-linux-gnu\/qt5\/mkspecs\/features\/spec_pre.prf \\$/;"	m
+Difference	set.cpp	/^Set Set::Difference(Set& set1,Set& set2)$/;"	f	class:Set	signature:(Set& set1,Set& set2)
+Difference	set.h	/^		static Set Difference(Set& set1,Set& set2);$/;"	p	class:Set	access:public	signature:(Set& set1,Set& set2)
+EXE	makefile	/^EXE=set$/;"	m
+Empty	set.cpp	/^bool Set::Empty()$/;"	f	class:Set	signature:()
+Empty	set.h	/^		bool Empty();$/;"	p	class:Set	access:public	signature:()
+End	set.h	/^		SetNode* End();$/;"	p	class:Set	access:public	signature:()
+Equal	set.cpp	/^bool Set::Equal(Set& s)$/;"	f	class:Set	signature:(Set& s)
+Equal	set.h	/^		bool Equal(Set& s);$/;"	p	class:Set	access:public	signature:(Set& s)
+Head	set.cpp	/^SetNode* Set::Head()$/;"	f	class:Set	signature:()
+Head	set.h	/^		SetNode* Head();$/;"	p	class:Set	access:public	signature:()
+INCPATH	build-set-pro-Desktop-Debug/Makefile	/^INCPATH       = -I\/usr\/lib\/x86_64-linux-gnu\/qt5\/mkspecs\/linux-g++-64 -I..\/set-pro -I.$/;"	m
+INSTALL_DIR	build-set-pro-Desktop-Debug/Makefile	/^INSTALL_DIR   = $(COPY_DIR)$/;"	m
+INSTALL_FILE	build-set-pro-Desktop-Debug/Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
+INSTALL_PROGRAM	build-set-pro-Desktop-Debug/Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
+Insert	set.cpp	/^void Set::Insert(void* data)$/;"	f	class:Set	signature:(void* data)
+Insert	set.h	/^		void Insert(void* data);$/;"	p	class:Set	access:public	signature:(void* data)
+Intersection	set.cpp	/^Set Set::Intersection(Set& set1,Set& set2)$/;"	f	class:Set	signature:(Set& set1,Set& set2)
+Intersection	set.h	/^		static Set Intersection(Set& set1,Set& set2);$/;"	p	class:Set	access:public	signature:(Set& set1,Set& set2)
+IsMember	set.cpp	/^bool Set::IsMember(void* data)$/;"	f	class:Set	signature:(void* data)
+IsMember	set.h	/^		bool IsMember(void* data);$/;"	p	class:Set	access:public	signature:(void* data)
+IsSubSet	set.cpp	/^bool Set::IsSubSet(Set& s)$/;"	f	class:Set	signature:(Set& s)
+IsSubSet	set.h	/^		bool IsSubSet(Set& s);$/;"	p	class:Set	access:public	signature:(Set& s)
+LFLAGS	build-set-pro-Desktop-Debug/Makefile	/^LFLAGS        = -m64$/;"	m
+LIBS	build-set-pro-Desktop-Debug/Makefile	/^LIBS          = $(SUBLIBS)  $/;"	m
+LINK	build-set-pro-Desktop-Debug/Makefile	/^LINK          = g++$/;"	m
+MAKEFILE	build-set-pro-Desktop-Debug/Makefile	/^MAKEFILE      = Makefile$/;"	m
+MKDIR	build-set-pro-Desktop-Debug/Makefile	/^MKDIR         = mkdir -p$/;"	m
+MOVE	build-set-pro-Desktop-Debug/Makefile	/^MOVE          = mv -f$/;"	m
+OBJECTS	build-set-pro-Desktop-Debug/Makefile	/^OBJECTS       = main.o \\$/;"	m
+OBJECTS_DIR	build-set-pro-Desktop-Debug/Makefile	/^OBJECTS_DIR   = .\/$/;"	m
+Print	main.cpp	/^void Print(const string& str,Set& s)$/;"	f	signature:(const string& str,Set& s)
+QMAKE	build-set-pro-Desktop-Debug/Makefile	/^QMAKE         = \/usr\/lib\/x86_64-linux-gnu\/qt5\/bin\/qmake$/;"	m
+QMAKE_TARGET	build-set-pro-Desktop-Debug/Makefile	/^QMAKE_TARGET  = set-pro$/;"	m
+RANLIB	build-set-pro-Desktop-Debug/Makefile	/^RANLIB        = $/;"	m
+Remove	set.cpp	/^void Set::Remove(void* data)$/;"	f	class:Set	signature:(void* data)
+Remove	set.h	/^		void Remove(void* data);$/;"	p	class:Set	access:public	signature:(void* data)
+SED	build-set-pro-Desktop-Debug/Makefile	/^SED           = sed$/;"	m
+SOURCES	build-set-pro-Desktop-Debug/Makefile	/^SOURCES       = ..\/main.cpp \\$/;"	m
+STRIP	build-set-pro-Desktop-Debug/Makefile	/^STRIP         = strip$/;"	m
+SYMLINK	build-set-pro-Desktop-Debug/Makefile	/^SYMLINK       = ln -f -s$/;"	m
+Set	set.cpp	/^Set::Set(SetMatchFunc fun)$/;"	f	class:Set	signature:(SetMatchFunc fun)
+Set	set.cpp	/^Set::Set(const Set& s)$/;"	f	class:Set	signature:(const Set& s)
+Set	set.h	/^		Set(SetMatchFunc fun);$/;"	p	class:Set	access:public	signature:(SetMatchFunc fun)
+Set	set.h	/^		Set(const Set&s);$/;"	p	class:Set	access:public	signature:(const Set&s)
+Set	set.h	/^class Set$/;"	c
+Set::Begin	set.h	/^		SetNode* Begin();$/;"	p	class:Set	access:public	signature:()
+Set::Difference	set.cpp	/^Set Set::Difference(Set& set1,Set& set2)$/;"	f	class:Set	signature:(Set& set1,Set& set2)
+Set::Difference	set.h	/^		static Set Difference(Set& set1,Set& set2);$/;"	p	class:Set	access:public	signature:(Set& set1,Set& set2)
+Set::Empty	set.cpp	/^bool Set::Empty()$/;"	f	class:Set	signature:()
+Set::Empty	set.h	/^		bool Empty();$/;"	p	class:Set	access:public	signature:()
+Set::End	set.h	/^		SetNode* End();$/;"	p	class:Set	access:public	signature:()
+Set::Equal	set.cpp	/^bool Set::Equal(Set& s)$/;"	f	class:Set	signature:(Set& s)
+Set::Equal	set.h	/^		bool Equal(Set& s);$/;"	p	class:Set	access:public	signature:(Set& s)
+Set::Head	set.cpp	/^SetNode* Set::Head()$/;"	f	class:Set	signature:()
+Set::Head	set.h	/^		SetNode* Head();$/;"	p	class:Set	access:public	signature:()
+Set::Insert	set.cpp	/^void Set::Insert(void* data)$/;"	f	class:Set	signature:(void* data)
+Set::Insert	set.h	/^		void Insert(void* data);$/;"	p	class:Set	access:public	signature:(void* data)
+Set::Intersection	set.cpp	/^Set Set::Intersection(Set& set1,Set& set2)$/;"	f	class:Set	signature:(Set& set1,Set& set2)
+Set::Intersection	set.h	/^		static Set Intersection(Set& set1,Set& set2);$/;"	p	class:Set	access:public	signature:(Set& set1,Set& set2)
+Set::IsMember	set.cpp	/^bool Set::IsMember(void* data)$/;"	f	class:Set	signature:(void* data)
+Set::IsMember	set.h	/^		bool IsMember(void* data);$/;"	p	class:Set	access:public	signature:(void* data)
+Set::IsSubSet	set.cpp	/^bool Set::IsSubSet(Set& s)$/;"	f	class:Set	signature:(Set& s)
+Set::IsSubSet	set.h	/^		bool IsSubSet(Set& s);$/;"	p	class:Set	access:public	signature:(Set& s)
+Set::Remove	set.cpp	/^void Set::Remove(void* data)$/;"	f	class:Set	signature:(void* data)
+Set::Remove	set.h	/^		void Remove(void* data);$/;"	p	class:Set	access:public	signature:(void* data)
+Set::Set	set.cpp	/^Set::Set(SetMatchFunc fun)$/;"	f	class:Set	signature:(SetMatchFunc fun)
+Set::Set	set.cpp	/^Set::Set(const Set& s)$/;"	f	class:Set	signature:(const Set& s)
+Set::Set	set.h	/^		Set(SetMatchFunc fun);$/;"	p	class:Set	access:public	signature:(SetMatchFunc fun)
+Set::Set	set.h	/^		Set(const Set&s);$/;"	p	class:Set	access:public	signature:(const Set&s)
+Set::Size	set.cpp	/^size_t Set::Size()$/;"	f	class:Set	signature:()
+Set::Size	set.h	/^		size_t Size();$/;"	p	class:Set	access:public	signature:()
+Set::Union	set.cpp	/^Set Set::Union(Set& set1,Set& set2)$/;"	f	class:Set	signature:(Set& set1,Set& set2)
+Set::Union	set.h	/^		static Set Union(Set& set1,Set& set2);$/;"	p	class:Set	access:public	signature:(Set& set1,Set& set2)
+Set::m_Set	set.h	/^		List m_Set;$/;"	m	class:Set	access:private
+Set::m_pMatchFun	set.h	/^		SetMatchFunc m_pMatchFun;$/;"	m	class:Set	access:private
+Set::operator =	set.cpp	/^Set& Set::operator=(const Set& s)$/;"	f	class:Set	signature:(const Set& s)
+Set::operator =	set.h	/^		Set& operator=(const Set& s);$/;"	p	class:Set	access:public	signature:(const Set& s)
+SetMatchFunc	set.h	/^typedef bool (*SetMatchFunc)(void* data1,void* data2);$/;"	t
+SetNode	set.h	/^typedef ListNode SetNode;$/;"	t
+Size	set.cpp	/^size_t Set::Size()$/;"	f	class:Set	signature:()
+Size	set.h	/^		size_t Size();$/;"	p	class:Set	access:public	signature:()
+TAR	build-set-pro-Desktop-Debug/Makefile	/^TAR           = tar -cf$/;"	m
+TARGET	build-set-pro-Desktop-Debug/Makefile	/^TARGET        = set-pro$/;"	m
+Union	set.cpp	/^Set Set::Union(Set& set1,Set& set2)$/;"	f	class:Set	signature:(Set& set1,Set& set2)
+Union	set.h	/^		static Set Union(Set& set1,Set& set2);$/;"	p	class:Set	access:public	signature:(Set& set1,Set& set2)
+_SET_H_	set.h	19;"	d
+m_Set	set.h	/^		List m_Set;$/;"	m	class:Set	access:private
+m_pMatchFun	set.h	/^		SetMatchFunc m_pMatchFun;$/;"	m	class:Set	access:private
+main	main.cpp	/^int main()$/;"	f	signature:()
+match	main.cpp	/^bool match(void* data1,void* data2)$/;"	f	signature:(void* data1,void* data2)
+operator =	set.cpp	/^Set& Set::operator=(const Set& s)$/;"	f	class:Set	signature:(const Set& s)
+operator =	set.h	/^		Set& operator=(const Set& s);$/;"	p	class:Set	access:public	signature:(const Set& s)

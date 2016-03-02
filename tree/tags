@@ -1,0 +1,53 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AVLTree	AVLTree.cpp	/^AVLTree::AVLTree()$/;"	f	class:AVLTree	signature:()
+AVLTree	AVLTree.h	/^        AVLTree();$/;"	p	class:AVLTree	access:public	signature:()
+AVLTree	AVLTree.h	/^        AVLTree(TreeDataCompareFunc compareFunc);$/;"	p	class:AVLTree	access:public	signature:(TreeDataCompareFunc compareFunc)
+AVLTree	AVLTree.h	/^class AVLTree$/;"	c
+AVLTree::AVLTree	AVLTree.cpp	/^AVLTree::AVLTree()$/;"	f	class:AVLTree	signature:()
+AVLTree::AVLTree	AVLTree.h	/^        AVLTree();$/;"	p	class:AVLTree	access:public	signature:()
+AVLTree::AVLTree	AVLTree.h	/^        AVLTree(TreeDataCompareFunc compareFunc);$/;"	p	class:AVLTree	access:public	signature:(TreeDataCompareFunc compareFunc)
+AVLTree::Begin	AVLTree.h	/^		TreeNode* Begin();$/;"	p	class:AVLTree	access:public	signature:()
+AVLTree::Empty	AVLTree.h	/^		bool Empty();$/;"	p	class:AVLTree	access:public	signature:()
+AVLTree::End	AVLTree.h	/^		TreeNode* End();$/;"	p	class:AVLTree	access:public	signature:()
+AVLTree::Find	AVLTree.h	/^		TreeNode* Find(void* data);$/;"	p	class:AVLTree	access:public	signature:(void* data)
+AVLTree::Insert	AVLTree.h	/^		TreeNode* Insert(void* data);$/;"	p	class:AVLTree	access:public	signature:(void* data)
+AVLTree::Next	AVLTree.h	/^		TreeNode* Next();$/;"	p	class:AVLTree	access:public	signature:()
+AVLTree::Remove	AVLTree.h	/^		void Remove(void* data);$/;"	p	class:AVLTree	access:public	signature:(void* data)
+AVLTree::Root	AVLTree.h	/^		TreeNode* Root();$/;"	p	class:AVLTree	access:public	signature:()
+AVLTree::Size	AVLTree.h	/^		size_t Size();$/;"	p	class:AVLTree	access:public	signature:()
+AVLTree::m_CompareFunc	AVLTree.h	/^		TreeDataCompareFunc m_CompareFunc;$/;"	m	class:AVLTree	access:private
+AVLTree::m_nDepth	AVLTree.h	/^		size_t m_nDepth;$/;"	m	class:AVLTree	access:private
+AVLTree::m_nSize	AVLTree.h	/^		size_t m_nSize;$/;"	m	class:AVLTree	access:private
+AVLTree::m_pRoot	AVLTree.h	/^		TreeNode* m_pRoot;$/;"	m	class:AVLTree	access:private
+AVLTree::~AVLTree	AVLTree.h	/^		~AVLTree();$/;"	p	class:AVLTree	access:public	signature:()
+Begin	AVLTree.h	/^		TreeNode* Begin();$/;"	p	class:AVLTree	access:public	signature:()
+DefaultCompareFunc	AVLTree.cpp	/^int DefaultCompareFunc(void* data1,void* data2)$/;"	f	signature:(void* data1,void* data2)
+Empty	AVLTree.h	/^		bool Empty();$/;"	p	class:AVLTree	access:public	signature:()
+End	AVLTree.h	/^		TreeNode* End();$/;"	p	class:AVLTree	access:public	signature:()
+Find	AVLTree.h	/^		TreeNode* Find(void* data);$/;"	p	class:AVLTree	access:public	signature:(void* data)
+Insert	AVLTree.h	/^		TreeNode* Insert(void* data);$/;"	p	class:AVLTree	access:public	signature:(void* data)
+Next	AVLTree.h	/^		TreeNode* Next();$/;"	p	class:AVLTree	access:public	signature:()
+Remove	AVLTree.h	/^		void Remove(void* data);$/;"	p	class:AVLTree	access:public	signature:(void* data)
+Root	AVLTree.h	/^		TreeNode* Root();$/;"	p	class:AVLTree	access:public	signature:()
+Size	AVLTree.h	/^		size_t Size();$/;"	p	class:AVLTree	access:public	signature:()
+TreeDataCompareFunc	AVLTree.h	/^typedef int (*TreeDataCompareFunc)(void* data1,void* data2);$/;"	t
+TreeNode	AVLTree.h	/^struct TreeNode$/;"	s
+TreeNode::data	AVLTree.h	/^	void* data;$/;"	m	struct:TreeNode	access:public
+TreeNode::factor	AVLTree.h	/^	int factor;$/;"	m	struct:TreeNode	access:public
+TreeNode::left	AVLTree.h	/^	struct TreeNode* left;$/;"	m	struct:TreeNode	typeref:struct:TreeNode::TreeNode	access:public
+TreeNode::right	AVLTree.h	/^	struct TreeNode* right;$/;"	m	struct:TreeNode	typeref:struct:TreeNode::TreeNode	access:public
+_AVL_TREE_H_	AVLTree.h	20;"	d
+data	AVLTree.h	/^	void* data;$/;"	m	struct:TreeNode	access:public
+factor	AVLTree.h	/^	int factor;$/;"	m	struct:TreeNode	access:public
+left	AVLTree.h	/^	struct TreeNode* left;$/;"	m	struct:TreeNode	typeref:struct:TreeNode::TreeNode	access:public
+m_CompareFunc	AVLTree.h	/^		TreeDataCompareFunc m_CompareFunc;$/;"	m	class:AVLTree	access:private
+m_nDepth	AVLTree.h	/^		size_t m_nDepth;$/;"	m	class:AVLTree	access:private
+m_nSize	AVLTree.h	/^		size_t m_nSize;$/;"	m	class:AVLTree	access:private
+m_pRoot	AVLTree.h	/^		TreeNode* m_pRoot;$/;"	m	class:AVLTree	access:private
+right	AVLTree.h	/^	struct TreeNode* right;$/;"	m	struct:TreeNode	typeref:struct:TreeNode::TreeNode	access:public
+~AVLTree	AVLTree.h	/^		~AVLTree();$/;"	p	class:AVLTree	access:public	signature:()

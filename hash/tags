@@ -1,0 +1,207 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AR	build-hash-pro-Desktop-Debug/Makefile	/^AR            = ar cqs$/;"	m
+Begin	hash.cpp	/^HashItem* Hash::Begin()$/;"	f	class:Hash	signature:()
+Begin	hash.h	/^		HashItem* Begin();$/;"	p	class:Hash	access:public	signature:()
+Begin	hash.h	/^		HashItem* Begin();$/;"	p	class:OpenHash	access:public	signature:()
+CC	build-hash-pro-Desktop-Debug/Makefile	/^CC            = gcc$/;"	m
+CFLAGS	build-hash-pro-Desktop-Debug/Makefile	/^CFLAGS        = -m64 -pipe -g -Wall -W -fPIE $(DEFINES)$/;"	m
+CHK_DIR_EXISTS	build-hash-pro-Desktop-Debug/Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
+COMPRESS	build-hash-pro-Desktop-Debug/Makefile	/^COMPRESS      = gzip -9f$/;"	m
+COPY	build-hash-pro-Desktop-Debug/Makefile	/^COPY          = cp -f$/;"	m
+COPY_DIR	build-hash-pro-Desktop-Debug/Makefile	/^COPY_DIR      = cp -f -R$/;"	m
+COPY_FILE	build-hash-pro-Desktop-Debug/Makefile	/^COPY_FILE     = cp -f$/;"	m
+CPP	makefile	/^CPP=g++$/;"	m
+CPPFLAG	makefile	/^CPPFLAG=-g$/;"	m
+CXX	build-hash-pro-Desktop-Debug/Makefile	/^CXX           = g++$/;"	m
+CXXFLAGS	build-hash-pro-Desktop-Debug/Makefile	/^CXXFLAGS      = -m64 -pipe -g -Wall -W -fPIE $(DEFINES)$/;"	m
+Current	hash.cpp	/^HashItem* Hash::Current()$/;"	f	class:Hash	signature:()
+Current	hash.h	/^		HashItem* Current();$/;"	p	class:Hash	access:public	signature:()
+Current	hash.h	/^		HashItem* Current();$/;"	p	class:OpenHash	access:public	signature:()
+DEFINES	build-hash-pro-Desktop-Debug/Makefile	/^DEFINES       = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG$/;"	m
+DEL_DIR	build-hash-pro-Desktop-Debug/Makefile	/^DEL_DIR       = rmdir$/;"	m
+DEL_FILE	build-hash-pro-Desktop-Debug/Makefile	/^DEL_FILE      = rm -f$/;"	m
+DESTDIR	build-hash-pro-Desktop-Debug/Makefile	/^DESTDIR       = #avoid trailing-slash linebreak$/;"	m
+DIST	build-hash-pro-Desktop-Debug/Makefile	/^DIST          = \/usr\/lib\/x86_64-linux-gnu\/qt5\/mkspecs\/features\/spec_pre.prf \\$/;"	m
+DefaultCompare	hash.cpp	/^bool DefaultCompare(void* key1,void* key2)$/;"	f	signature:(void* key1,void* key2)
+DefaultHash	hash.cpp	/^size_t DefaultHash(void* val,size_t nBuckets)$/;"	f	signature:(void* val,size_t nBuckets)
+EXE	makefile	/^EXE=hash$/;"	m
+Empty	hash.cpp	/^bool Hash::Empty()$/;"	f	class:Hash	signature:()
+Empty	hash.h	/^		bool Empty();$/;"	p	class:Hash	access:public	signature:()
+Empty	hash.h	/^		bool Empty();$/;"	p	class:OpenHash	access:public	signature:()
+End	hash.cpp	/^HashItem* Hash::End()$/;"	f	class:Hash	signature:()
+End	hash.h	/^		HashItem* End();$/;"	p	class:Hash	access:public	signature:()
+End	hash.h	/^		HashItem* End();$/;"	p	class:OpenHash	access:public	signature:()
+Find	hash.cpp	/^HashItem* Hash::Find(void* key)$/;"	f	class:Hash	signature:(void* key)
+Find	hash.h	/^		HashItem* Find(void* key);$/;"	p	class:Hash	access:public	signature:(void* key)
+Find	hash.h	/^		HashItem* Find(void* key);$/;"	p	class:OpenHash	access:public	signature:(void* key)
+Hash	hash.cpp	/^Hash::Hash(HashFunc hashFunc,HashKeyCompareFunc compareFunc,size_t nBuckets)$/;"	f	class:Hash	signature:(HashFunc hashFunc,HashKeyCompareFunc compareFunc,size_t nBuckets)
+Hash	hash.cpp	/^Hash::Hash(HashFunc hashFunc,size_t nBuckets)$/;"	f	class:Hash	signature:(HashFunc hashFunc,size_t nBuckets)
+Hash	hash.cpp	/^Hash::Hash(HashKeyCompareFunc compareFunc,size_t nBuckets)$/;"	f	class:Hash	signature:(HashKeyCompareFunc compareFunc,size_t nBuckets)
+Hash	hash.cpp	/^Hash::Hash(size_t nbuckets)$/;"	f	class:Hash	signature:(size_t nbuckets)
+Hash	hash.h	/^		Hash(HashFunc hashFunc,HashKeyCompareFunc compareFunc,size_t nBuckets = default_buckets);$/;"	p	class:Hash	access:public	signature:(HashFunc hashFunc,HashKeyCompareFunc compareFunc,size_t nBuckets = default_buckets)
+Hash	hash.h	/^		Hash(HashFunc hashFunc,size_t nBuckets = default_buckets);$/;"	p	class:Hash	access:public	signature:(HashFunc hashFunc,size_t nBuckets = default_buckets)
+Hash	hash.h	/^		Hash(HashKeyCompareFunc compareFunc,size_t nBuckets = default_buckets);$/;"	p	class:Hash	access:public	signature:(HashKeyCompareFunc compareFunc,size_t nBuckets = default_buckets)
+Hash	hash.h	/^		Hash(size_t nBuckets = default_buckets);$/;"	p	class:Hash	access:public	signature:(size_t nBuckets = default_buckets)
+Hash	hash.h	/^class Hash$/;"	c
+Hash::Begin	hash.cpp	/^HashItem* Hash::Begin()$/;"	f	class:Hash	signature:()
+Hash::Begin	hash.h	/^		HashItem* Begin();$/;"	p	class:Hash	access:public	signature:()
+Hash::Current	hash.cpp	/^HashItem* Hash::Current()$/;"	f	class:Hash	signature:()
+Hash::Current	hash.h	/^		HashItem* Current();$/;"	p	class:Hash	access:public	signature:()
+Hash::Empty	hash.cpp	/^bool Hash::Empty()$/;"	f	class:Hash	signature:()
+Hash::Empty	hash.h	/^		bool Empty();$/;"	p	class:Hash	access:public	signature:()
+Hash::End	hash.cpp	/^HashItem* Hash::End()$/;"	f	class:Hash	signature:()
+Hash::End	hash.h	/^		HashItem* End();$/;"	p	class:Hash	access:public	signature:()
+Hash::Find	hash.cpp	/^HashItem* Hash::Find(void* key)$/;"	f	class:Hash	signature:(void* key)
+Hash::Find	hash.h	/^		HashItem* Find(void* key);$/;"	p	class:Hash	access:public	signature:(void* key)
+Hash::Hash	hash.cpp	/^Hash::Hash(HashFunc hashFunc,HashKeyCompareFunc compareFunc,size_t nBuckets)$/;"	f	class:Hash	signature:(HashFunc hashFunc,HashKeyCompareFunc compareFunc,size_t nBuckets)
+Hash::Hash	hash.cpp	/^Hash::Hash(HashFunc hashFunc,size_t nBuckets)$/;"	f	class:Hash	signature:(HashFunc hashFunc,size_t nBuckets)
+Hash::Hash	hash.cpp	/^Hash::Hash(HashKeyCompareFunc compareFunc,size_t nBuckets)$/;"	f	class:Hash	signature:(HashKeyCompareFunc compareFunc,size_t nBuckets)
+Hash::Hash	hash.cpp	/^Hash::Hash(size_t nbuckets)$/;"	f	class:Hash	signature:(size_t nbuckets)
+Hash::Hash	hash.h	/^		Hash(HashFunc hashFunc,HashKeyCompareFunc compareFunc,size_t nBuckets = default_buckets);$/;"	p	class:Hash	access:public	signature:(HashFunc hashFunc,HashKeyCompareFunc compareFunc,size_t nBuckets = default_buckets)
+Hash::Hash	hash.h	/^		Hash(HashFunc hashFunc,size_t nBuckets = default_buckets);$/;"	p	class:Hash	access:public	signature:(HashFunc hashFunc,size_t nBuckets = default_buckets)
+Hash::Hash	hash.h	/^		Hash(HashKeyCompareFunc compareFunc,size_t nBuckets = default_buckets);$/;"	p	class:Hash	access:public	signature:(HashKeyCompareFunc compareFunc,size_t nBuckets = default_buckets)
+Hash::Hash	hash.h	/^		Hash(size_t nBuckets = default_buckets);$/;"	p	class:Hash	access:public	signature:(size_t nBuckets = default_buckets)
+Hash::Insert	hash.cpp	/^HashItem* Hash::Insert(void* key,void* data)$/;"	f	class:Hash	signature:(void* key,void* data)
+Hash::Insert	hash.h	/^		HashItem* Insert(void* key,void* data);$/;"	p	class:Hash	access:public	signature:(void* key,void* data)
+Hash::IteratorInfo	hash.h	/^		struct IteratorInfo$/;"	s	class:Hash	access:private
+Hash::IteratorInfo::IteratorInfo	hash.h	/^			IteratorInfo()$/;"	f	struct:Hash::IteratorInfo	access:public	signature:()
+Hash::IteratorInfo::Reset	hash.h	/^			void Reset()$/;"	f	struct:Hash::IteratorInfo	access:public	signature:()
+Hash::IteratorInfo::Valid	hash.h	/^			bool Valid()$/;"	f	struct:Hash::IteratorInfo	access:public	signature:()
+Hash::IteratorInfo::m_nBucketIndex	hash.h	/^			int  m_nBucketIndex;$/;"	m	struct:Hash::IteratorInfo	access:public
+Hash::IteratorInfo::m_pCurrentNode	hash.h	/^			ListNode* m_pCurrentNode;$/;"	m	struct:Hash::IteratorInfo	access:public
+Hash::Next	hash.cpp	/^HashItem* Hash::Next()$/;"	f	class:Hash	signature:()
+Hash::Next	hash.h	/^		HashItem* Next();$/;"	p	class:Hash	access:public	signature:()
+Hash::Remove	hash.cpp	/^void Hash::Remove(void* key)$/;"	f	class:Hash	signature:(void* key)
+Hash::Remove	hash.h	/^		void Remove(void* key);$/;"	p	class:Hash	access:public	signature:(void* key)
+Hash::Size	hash.cpp	/^size_t Hash::Size()$/;"	f	class:Hash	signature:()
+Hash::Size	hash.h	/^		size_t Size();$/;"	p	class:Hash	access:public	signature:()
+Hash::Traversal	hash.cpp	/^void Hash::Traversal(void(*handle)(void* param,HashItem* item),void* param)$/;"	f	class:Hash	signature:(void(*handle)(void* param,HashItem* item),void* param)
+Hash::Traversal	hash.h	/^		void Traversal(void(*handle)(void* param,HashItem* item),void* param);$/;"	p	class:Hash	access:public	signature:(void(*handle)(void* param,HashItem* item),void* param)
+Hash::default_buckets	hash.h	/^			default_buckets = 64,$/;"	e	enum:Hash::__anon1
+Hash::m_CompareFunc	hash.h	/^		HashKeyCompareFunc m_CompareFunc;$/;"	m	class:Hash	access:private
+Hash::m_HashFunc	hash.h	/^		HashFunc m_HashFunc;$/;"	m	class:Hash	access:private
+Hash::m_IterInfo	hash.h	/^		IteratorInfo m_IterInfo;$/;"	m	class:Hash	access:private
+Hash::m_nBuckets	hash.h	/^		size_t m_nBuckets;$/;"	m	class:Hash	access:private
+Hash::m_nSize	hash.h	/^		size_t m_nSize;$/;"	m	class:Hash	access:private
+Hash::m_pTable	hash.h	/^		List*  m_pTable;$/;"	m	class:Hash	access:private
+Hash::~Hash	hash.cpp	/^Hash::~Hash()$/;"	f	class:Hash	signature:()
+Hash::~Hash	hash.h	/^		~Hash();$/;"	p	class:Hash	access:public	signature:()
+HashFunc	hash.h	/^typedef size_t (*HashFunc)(void* key,size_t nBuckets);$/;"	t
+HashItem	hash.h	/^struct HashItem$/;"	s
+HashItem::key	hash.h	/^	void* key;$/;"	m	struct:HashItem	access:public
+HashItem::value	hash.h	/^	void* value;$/;"	m	struct:HashItem	access:public
+HashItemWrap	hash.h	/^			HashItemWrap()$/;"	f	struct:OpenHash::HashItemWrap	access:public	signature:()
+HashItemWrap	hash.h	/^		struct HashItemWrap$/;"	s	class:OpenHash	access:private
+HashKeyCompareFunc	hash.h	/^typedef bool (*HashKeyCompareFunc)(void* key1,void* key2);$/;"	t
+INCPATH	build-hash-pro-Desktop-Debug/Makefile	/^INCPATH       = -I\/usr\/lib\/x86_64-linux-gnu\/qt5\/mkspecs\/linux-g++-64 -I..\/hash-pro -I.$/;"	m
+INSTALL_DIR	build-hash-pro-Desktop-Debug/Makefile	/^INSTALL_DIR   = $(COPY_DIR)$/;"	m
+INSTALL_FILE	build-hash-pro-Desktop-Debug/Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
+INSTALL_PROGRAM	build-hash-pro-Desktop-Debug/Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
+Insert	hash.cpp	/^HashItem* Hash::Insert(void* key,void* data)$/;"	f	class:Hash	signature:(void* key,void* data)
+Insert	hash.h	/^		HashItem* Insert(void* key,void* data);$/;"	p	class:Hash	access:public	signature:(void* key,void* data)
+Insert	hash.h	/^		HashItem* Insert(void* key,void* data);$/;"	p	class:OpenHash	access:public	signature:(void* key,void* data)
+IteratorInfo	hash.h	/^			IteratorInfo()$/;"	f	struct:Hash::IteratorInfo	access:public	signature:()
+IteratorInfo	hash.h	/^			IteratorInfo()$/;"	f	struct:OpenHash::IteratorInfo	access:public	signature:()
+IteratorInfo	hash.h	/^		struct IteratorInfo$/;"	s	class:Hash	access:private
+IteratorInfo	hash.h	/^		struct IteratorInfo$/;"	s	class:OpenHash	access:private
+LFLAGS	build-hash-pro-Desktop-Debug/Makefile	/^LFLAGS        = -m64$/;"	m
+LIBS	build-hash-pro-Desktop-Debug/Makefile	/^LIBS          = $(SUBLIBS)  $/;"	m
+LINK	build-hash-pro-Desktop-Debug/Makefile	/^LINK          = g++$/;"	m
+MAKEFILE	build-hash-pro-Desktop-Debug/Makefile	/^MAKEFILE      = Makefile$/;"	m
+MKDIR	build-hash-pro-Desktop-Debug/Makefile	/^MKDIR         = mkdir -p$/;"	m
+MOVE	build-hash-pro-Desktop-Debug/Makefile	/^MOVE          = mv -f$/;"	m
+Next	hash.cpp	/^HashItem* Hash::Next()$/;"	f	class:Hash	signature:()
+Next	hash.h	/^		HashItem* Next();$/;"	p	class:Hash	access:public	signature:()
+Next	hash.h	/^		HashItem* Next();$/;"	p	class:OpenHash	access:public	signature:()
+OBJECTS	build-hash-pro-Desktop-Debug/Makefile	/^OBJECTS       = hash.o \\$/;"	m
+OBJECTS_DIR	build-hash-pro-Desktop-Debug/Makefile	/^OBJECTS_DIR   = .\/$/;"	m
+OpenHash	hash.h	/^		OpenHash(HashFunc hashFunc,HashKeyCompareFunc compareFunc,size_t nBuckets = default_buckets);$/;"	p	class:OpenHash	access:public	signature:(HashFunc hashFunc,HashKeyCompareFunc compareFunc,size_t nBuckets = default_buckets)
+OpenHash	hash.h	/^		OpenHash(HashFunc hashFunc,size_t nBuckets = default_buckets);$/;"	p	class:OpenHash	access:public	signature:(HashFunc hashFunc,size_t nBuckets = default_buckets)
+OpenHash	hash.h	/^		OpenHash(HashKeyCompareFunc compareFunc,size_t nBuckets = default_buckets);$/;"	p	class:OpenHash	access:public	signature:(HashKeyCompareFunc compareFunc,size_t nBuckets = default_buckets)
+OpenHash	hash.h	/^		OpenHash(size_t nBuckets = default_buckets);$/;"	p	class:OpenHash	access:public	signature:(size_t nBuckets = default_buckets)
+OpenHash	hash.h	/^class OpenHash$/;"	c
+OpenHash::Begin	hash.h	/^		HashItem* Begin();$/;"	p	class:OpenHash	access:public	signature:()
+OpenHash::Current	hash.h	/^		HashItem* Current();$/;"	p	class:OpenHash	access:public	signature:()
+OpenHash::Empty	hash.h	/^		bool Empty();$/;"	p	class:OpenHash	access:public	signature:()
+OpenHash::End	hash.h	/^		HashItem* End();$/;"	p	class:OpenHash	access:public	signature:()
+OpenHash::Find	hash.h	/^		HashItem* Find(void* key);$/;"	p	class:OpenHash	access:public	signature:(void* key)
+OpenHash::HashItemWrap	hash.h	/^		struct HashItemWrap$/;"	s	class:OpenHash	access:private
+OpenHash::HashItemWrap::HashItemWrap	hash.h	/^			HashItemWrap()$/;"	f	struct:OpenHash::HashItemWrap	access:public	signature:()
+OpenHash::HashItemWrap::exist_flag	hash.h	/^			bool exist_flag;$/;"	m	struct:OpenHash::HashItemWrap	access:public
+OpenHash::HashItemWrap::item	hash.h	/^			HashItem item;$/;"	m	struct:OpenHash::HashItemWrap	access:public
+OpenHash::Insert	hash.h	/^		HashItem* Insert(void* key,void* data);$/;"	p	class:OpenHash	access:public	signature:(void* key,void* data)
+OpenHash::IteratorInfo	hash.h	/^		struct IteratorInfo$/;"	s	class:OpenHash	access:private
+OpenHash::IteratorInfo::IteratorInfo	hash.h	/^			IteratorInfo()$/;"	f	struct:OpenHash::IteratorInfo	access:public	signature:()
+OpenHash::IteratorInfo::Reset	hash.h	/^			void Reset()$/;"	f	struct:OpenHash::IteratorInfo	access:public	signature:()
+OpenHash::IteratorInfo::Valid	hash.h	/^			bool Valid()$/;"	f	struct:OpenHash::IteratorInfo	access:public	signature:()
+OpenHash::IteratorInfo::m_nBucketIndex	hash.h	/^			int  m_nBucketIndex;$/;"	m	struct:OpenHash::IteratorInfo	access:public
+OpenHash::IteratorInfo::m_pCurrentNode	hash.h	/^			ListNode* m_pCurrentNode;$/;"	m	struct:OpenHash::IteratorInfo	access:public
+OpenHash::Next	hash.h	/^		HashItem* Next();$/;"	p	class:OpenHash	access:public	signature:()
+OpenHash::OpenHash	hash.h	/^		OpenHash(HashFunc hashFunc,HashKeyCompareFunc compareFunc,size_t nBuckets = default_buckets);$/;"	p	class:OpenHash	access:public	signature:(HashFunc hashFunc,HashKeyCompareFunc compareFunc,size_t nBuckets = default_buckets)
+OpenHash::OpenHash	hash.h	/^		OpenHash(HashFunc hashFunc,size_t nBuckets = default_buckets);$/;"	p	class:OpenHash	access:public	signature:(HashFunc hashFunc,size_t nBuckets = default_buckets)
+OpenHash::OpenHash	hash.h	/^		OpenHash(HashKeyCompareFunc compareFunc,size_t nBuckets = default_buckets);$/;"	p	class:OpenHash	access:public	signature:(HashKeyCompareFunc compareFunc,size_t nBuckets = default_buckets)
+OpenHash::OpenHash	hash.h	/^		OpenHash(size_t nBuckets = default_buckets);$/;"	p	class:OpenHash	access:public	signature:(size_t nBuckets = default_buckets)
+OpenHash::Remove	hash.h	/^		void Remove(void* key);$/;"	p	class:OpenHash	access:public	signature:(void* key)
+OpenHash::Size	hash.h	/^		size_t Size();$/;"	p	class:OpenHash	access:public	signature:()
+OpenHash::Traversal	hash.h	/^		void Traversal(void(*handle)(void* param,HashItem* item),void* param);$/;"	p	class:OpenHash	access:public	signature:(void(*handle)(void* param,HashItem* item),void* param)
+OpenHash::m_CompareFunc	hash.h	/^		HashKeyCompareFunc m_CompareFunc;$/;"	m	class:OpenHash	access:private
+OpenHash::m_HashFunc	hash.h	/^		HashFunc m_HashFunc;$/;"	m	class:OpenHash	access:private
+OpenHash::m_IterInfo	hash.h	/^		IteratorInfo m_IterInfo;$/;"	m	class:OpenHash	access:private
+OpenHash::m_nLength	hash.h	/^		size_t    m_nLength;$/;"	m	class:OpenHash	access:private
+OpenHash::m_nSize	hash.h	/^		size_t m_nSize;$/;"	m	class:OpenHash	access:private
+OpenHash::m_pTable	hash.h	/^		HashItemWrap* m_pTable;$/;"	m	class:OpenHash	typeref:struct:OpenHash::HashItemWrap	access:private
+OpenHash::~OpenHash	hash.h	/^		~OpenHash();$/;"	p	class:OpenHash	access:public	signature:()
+Print	main.cpp	/^void Print(void* param,HashItem* item)$/;"	f	signature:(void* param,HashItem* item)
+QMAKE	build-hash-pro-Desktop-Debug/Makefile	/^QMAKE         = \/usr\/lib\/x86_64-linux-gnu\/qt5\/bin\/qmake$/;"	m
+QMAKE_TARGET	build-hash-pro-Desktop-Debug/Makefile	/^QMAKE_TARGET  = hash-pro$/;"	m
+RANLIB	build-hash-pro-Desktop-Debug/Makefile	/^RANLIB        = $/;"	m
+Remove	hash.cpp	/^void Hash::Remove(void* key)$/;"	f	class:Hash	signature:(void* key)
+Remove	hash.h	/^		void Remove(void* key);$/;"	p	class:Hash	access:public	signature:(void* key)
+Remove	hash.h	/^		void Remove(void* key);$/;"	p	class:OpenHash	access:public	signature:(void* key)
+Reset	hash.h	/^			void Reset()$/;"	f	struct:Hash::IteratorInfo	access:public	signature:()
+Reset	hash.h	/^			void Reset()$/;"	f	struct:OpenHash::IteratorInfo	access:public	signature:()
+SED	build-hash-pro-Desktop-Debug/Makefile	/^SED           = sed$/;"	m
+SOURCES	build-hash-pro-Desktop-Debug/Makefile	/^SOURCES       = ..\/hash.cpp \\$/;"	m
+STRIP	build-hash-pro-Desktop-Debug/Makefile	/^STRIP         = strip$/;"	m
+SYMLINK	build-hash-pro-Desktop-Debug/Makefile	/^SYMLINK       = ln -f -s$/;"	m
+Size	hash.cpp	/^size_t Hash::Size()$/;"	f	class:Hash	signature:()
+Size	hash.h	/^		size_t Size();$/;"	p	class:Hash	access:public	signature:()
+Size	hash.h	/^		size_t Size();$/;"	p	class:OpenHash	access:public	signature:()
+TAR	build-hash-pro-Desktop-Debug/Makefile	/^TAR           = tar -cf$/;"	m
+TARGET	build-hash-pro-Desktop-Debug/Makefile	/^TARGET        = hash-pro$/;"	m
+Traversal	hash.cpp	/^void Hash::Traversal(void(*handle)(void* param,HashItem* item),void* param)$/;"	f	class:Hash	signature:(void(*handle)(void* param,HashItem* item),void* param)
+Traversal	hash.h	/^		void Traversal(void(*handle)(void* param,HashItem* item),void* param);$/;"	p	class:Hash	access:public	signature:(void(*handle)(void* param,HashItem* item),void* param)
+Traversal	hash.h	/^		void Traversal(void(*handle)(void* param,HashItem* item),void* param);$/;"	p	class:OpenHash	access:public	signature:(void(*handle)(void* param,HashItem* item),void* param)
+Valid	hash.h	/^			bool Valid()$/;"	f	struct:Hash::IteratorInfo	access:public	signature:()
+Valid	hash.h	/^			bool Valid()$/;"	f	struct:OpenHash::IteratorInfo	access:public	signature:()
+_HASH_H_	hash.h	20;"	d
+default_buckets	hash.h	/^			default_buckets = 64,$/;"	e	enum:Hash::__anon1
+exist_flag	hash.h	/^			bool exist_flag;$/;"	m	struct:OpenHash::HashItemWrap	access:public
+item	hash.h	/^			HashItem item;$/;"	m	struct:OpenHash::HashItemWrap	access:public
+key	hash.h	/^	void* key;$/;"	m	struct:HashItem	access:public
+m_CompareFunc	hash.h	/^		HashKeyCompareFunc m_CompareFunc;$/;"	m	class:Hash	access:private
+m_CompareFunc	hash.h	/^		HashKeyCompareFunc m_CompareFunc;$/;"	m	class:OpenHash	access:private
+m_HashFunc	hash.h	/^		HashFunc m_HashFunc;$/;"	m	class:Hash	access:private
+m_HashFunc	hash.h	/^		HashFunc m_HashFunc;$/;"	m	class:OpenHash	access:private
+m_IterInfo	hash.h	/^		IteratorInfo m_IterInfo;$/;"	m	class:Hash	access:private
+m_IterInfo	hash.h	/^		IteratorInfo m_IterInfo;$/;"	m	class:OpenHash	access:private
+m_nBucketIndex	hash.h	/^			int  m_nBucketIndex;$/;"	m	struct:Hash::IteratorInfo	access:public
+m_nBucketIndex	hash.h	/^			int  m_nBucketIndex;$/;"	m	struct:OpenHash::IteratorInfo	access:public
+m_nBuckets	hash.h	/^		size_t m_nBuckets;$/;"	m	class:Hash	access:private
+m_nLength	hash.h	/^		size_t    m_nLength;$/;"	m	class:OpenHash	access:private
+m_nSize	hash.h	/^		size_t m_nSize;$/;"	m	class:Hash	access:private
+m_nSize	hash.h	/^		size_t m_nSize;$/;"	m	class:OpenHash	access:private
+m_pCurrentNode	hash.h	/^			ListNode* m_pCurrentNode;$/;"	m	struct:Hash::IteratorInfo	access:public
+m_pCurrentNode	hash.h	/^			ListNode* m_pCurrentNode;$/;"	m	struct:OpenHash::IteratorInfo	access:public
+m_pTable	hash.h	/^		HashItemWrap* m_pTable;$/;"	m	class:OpenHash	typeref:struct:OpenHash::HashItemWrap	access:private
+m_pTable	hash.h	/^		List*  m_pTable;$/;"	m	class:Hash	access:private
+main	main.cpp	/^int main()$/;"	f	signature:()
+value	hash.h	/^	void* value;$/;"	m	struct:HashItem	access:public
+~Hash	hash.cpp	/^Hash::~Hash()$/;"	f	class:Hash	signature:()
+~Hash	hash.h	/^		~Hash();$/;"	p	class:Hash	access:public	signature:()
+~OpenHash	hash.h	/^		~OpenHash();$/;"	p	class:OpenHash	access:public	signature:()

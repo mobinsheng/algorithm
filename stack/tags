@@ -1,0 +1,49 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Empty	stack.cpp	/^bool Stack::Empty()$/;"	f	class:Stack	signature:()
+Empty	stack.h	/^		bool Empty();$/;"	p	class:Stack	access:public	signature:()
+Pop	stack.cpp	/^void* Stack::Pop()$/;"	f	class:Stack	signature:()
+Pop	stack.h	/^		void* Pop();$/;"	p	class:Stack	access:public	signature:()
+Push	stack.cpp	/^void Stack::Push(void* data)$/;"	f	class:Stack	signature:(void* data)
+Push	stack.h	/^		void Push(void* data);$/;"	p	class:Stack	access:public	signature:(void* data)
+Size	stack.cpp	/^size_t Stack::Size()$/;"	f	class:Stack	signature:()
+Size	stack.h	/^		size_t Size();$/;"	p	class:Stack	access:public	signature:()
+Stack	stack.cpp	/^Stack::Stack()$/;"	f	class:Stack	signature:()
+Stack	stack.h	/^		Stack();$/;"	p	class:Stack	access:public	signature:()
+Stack	stack.h	/^class Stack$/;"	c
+Stack::Empty	stack.cpp	/^bool Stack::Empty()$/;"	f	class:Stack	signature:()
+Stack::Empty	stack.h	/^		bool Empty();$/;"	p	class:Stack	access:public	signature:()
+Stack::Pop	stack.cpp	/^void* Stack::Pop()$/;"	f	class:Stack	signature:()
+Stack::Pop	stack.h	/^		void* Pop();$/;"	p	class:Stack	access:public	signature:()
+Stack::Push	stack.cpp	/^void Stack::Push(void* data)$/;"	f	class:Stack	signature:(void* data)
+Stack::Push	stack.h	/^		void Push(void* data);$/;"	p	class:Stack	access:public	signature:(void* data)
+Stack::Size	stack.cpp	/^size_t Stack::Size()$/;"	f	class:Stack	signature:()
+Stack::Size	stack.h	/^		size_t Size();$/;"	p	class:Stack	access:public	signature:()
+Stack::Stack	stack.cpp	/^Stack::Stack()$/;"	f	class:Stack	signature:()
+Stack::Stack	stack.h	/^		Stack();$/;"	p	class:Stack	access:public	signature:()
+Stack::Top	stack.cpp	/^void* Stack::Top()$/;"	f	class:Stack	signature:()
+Stack::Top	stack.h	/^		void* Top();$/;"	p	class:Stack	access:public	signature:()
+Stack::m_nSize	stack.h	/^		size_t m_nSize;$/;"	m	class:Stack	access:private
+Stack::m_pTop	stack.h	/^		StackNode* m_pTop;$/;"	m	class:Stack	access:private
+Stack::~Stack	stack.cpp	/^Stack::~Stack()$/;"	f	class:Stack	signature:()
+Stack::~Stack	stack.h	/^		~Stack();$/;"	p	class:Stack	access:public	signature:()
+StackNode	stack.h	/^	StackNode()$/;"	f	struct:StackNode	access:public	signature:()
+StackNode	stack.h	/^struct StackNode$/;"	s
+StackNode::StackNode	stack.h	/^	StackNode()$/;"	f	struct:StackNode	access:public	signature:()
+StackNode::data	stack.h	/^	void* data;$/;"	m	struct:StackNode	access:public
+StackNode::next	stack.h	/^	struct StackNode* next;$/;"	m	struct:StackNode	typeref:struct:StackNode::StackNode	access:public
+StackNode::prev	stack.h	/^	struct StackNode* prev;$/;"	m	struct:StackNode	typeref:struct:StackNode::StackNode	access:public
+Top	stack.cpp	/^void* Stack::Top()$/;"	f	class:Stack	signature:()
+Top	stack.h	/^		void* Top();$/;"	p	class:Stack	access:public	signature:()
+_STACK_H_	stack.h	20;"	d
+data	stack.h	/^	void* data;$/;"	m	struct:StackNode	access:public
+m_nSize	stack.h	/^		size_t m_nSize;$/;"	m	class:Stack	access:private
+m_pTop	stack.h	/^		StackNode* m_pTop;$/;"	m	class:Stack	access:private
+next	stack.h	/^	struct StackNode* next;$/;"	m	struct:StackNode	typeref:struct:StackNode::StackNode	access:public
+prev	stack.h	/^	struct StackNode* prev;$/;"	m	struct:StackNode	typeref:struct:StackNode::StackNode	access:public
+~Stack	stack.cpp	/^Stack::~Stack()$/;"	f	class:Stack	signature:()
+~Stack	stack.h	/^		~Stack();$/;"	p	class:Stack	access:public	signature:()
