@@ -55,6 +55,8 @@ struct TreeNode
 typedef TreeNode* PTreeNode;
 
 // 节点node的值要大于等于左孩子的值
+
+// 二叉平衡树
 class AVLTree
 {
 	public:
@@ -68,6 +70,7 @@ class AVLTree
         AVLTree();
         AVLTree(TreeDataCompareFunc compareFunc);
 		~AVLTree();
+
 		TreeNode* Root();
 		size_t Size();
 		bool Empty();
@@ -79,14 +82,17 @@ class AVLTree
 		void Remove(void* data);
 
         // 中序递归遍历
-        void MidOrderTraverse(TreeNodeHandle handle,void* userData);
+        void MidOrderTraverse(TreeNodeHandle handle,void* userData,TreeNode* node = 0);
         // 前序递归遍历
-        void PreOrderTraverse(TreeNodeHandle handle,void* userData);
+        void PreOrderTraverse(TreeNodeHandle handle,void* userData,TreeNode* node = 0);
         // 后续递归遍历
-        void PostOrderTraverse(TreeNodeHandle handle,void* userData);
+        void PostOrderTraverse(TreeNodeHandle handle,void* userData,TreeNode* node = 0);
 
         // 查找
 		TreeNode* Find(void* data);
+
+        size_t Depth(TreeNode* node = 0);
+        size_t Leafs(TreeNode* node = 0);
 
 	private:
 
@@ -108,10 +114,13 @@ class AVLTree
         void PostOrderTraverseRecu(TreeNode* node,TreeNodeHandle handle,void* userData);
 
         void ClearRecu(TreeNode* node);
+
+        size_t DepthRecu(TreeNode* node);
+        size_t LeafsRecu(TreeNode* node);
+
     private:
 		TreeNode* m_pRoot;
 		size_t m_nSize;
-		size_t m_nDepth;
 		TreeDataCompareFunc m_CompareFunc;
 };
 

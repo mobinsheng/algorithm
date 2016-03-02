@@ -56,6 +56,9 @@ int main(int argc, char *argv[])
 
     t.PreOrderTraverse(PrintNode,0);
     cout << endl;
+
+    cout << "Depth="<<t.Depth() << endl;
+    cout << "Leafs=" << t.Leafs() << endl;
     ///
     t.Remove((void*)6);
     t.MidOrderTraverse(PrintNode,0);

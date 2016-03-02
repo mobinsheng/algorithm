@@ -33,7 +33,6 @@ int DefaultCompareFunc(void* data1,void* data2)
 
 AVLTree::AVLTree()
 {
-    m_nDepth = 0;
     m_nSize = 0;
 	m_pRoot = 0;
 	m_CompareFunc = DefaultCompareFunc;
@@ -43,7 +42,6 @@ AVLTree::AVLTree()
 AVLTree::AVLTree(TreeDataCompareFunc compareFunc)
 {
 	m_nSize = 0;
-	m_nDepth = 0;
 	m_pRoot = 0;
 	m_CompareFunc = compareFunc;
 }
@@ -172,6 +170,7 @@ TreeNode* AVLTree::InsertRecu(void *data, PTreeNode &node,bool& isbalanced)
 
     if(node == 0)
     {
+        ++m_nSize;
         insertNode = new TreeNode;
         insertNode->data = data;
         node = insertNode;
@@ -185,6 +184,8 @@ TreeNode* AVLTree::InsertRecu(void *data, PTreeNode &node,bool& isbalanced)
         {
             if(node->left == 0)
             {
+                ++m_nSize;
+
                 insertNode = new TreeNode;
 
                 insertNode->data = data;
@@ -220,6 +221,8 @@ TreeNode* AVLTree::InsertRecu(void *data, PTreeNode &node,bool& isbalanced)
         {
             if(node->right == 0)
             {
+                ++m_nSize;
+
                 insertNode = new TreeNode;
 
                 insertNode->data = data;
@@ -256,6 +259,8 @@ TreeNode* AVLTree::InsertRecu(void *data, PTreeNode &node,bool& isbalanced)
             if(node->hidden == false)
                 return 0;
 
+            ++m_nSize;
+
             node->data = data;
             node->hidden = false;
             isbalanced = true;
@@ -275,6 +280,7 @@ void AVLTree::Remove(void *data)
         if(0 == node)
             break;
 
+        --m_nSize;
         node->hidden = true;
     }
 }
@@ -336,19 +342,28 @@ void AVLTree::PostOrderTraverseRecu(TreeNode* node,TreeNodeHandle handle,void* u
 }
 
 
-void AVLTree::MidOrderTraverse(TreeNodeHandle handle,void* userData)
+void AVLTree::MidOrderTraverse(TreeNodeHandle handle,void* userData,TreeNode* node )
 {
-    return MidOrderTraverseRecu(m_pRoot,handle,userData);
+    if(node == 0)
+        return MidOrderTraverseRecu(m_pRoot,handle,userData);
+    else
+        return MidOrderTraverseRecu(node,handle,userData);
 }
 
-void AVLTree::PreOrderTraverse(TreeNodeHandle handle,void* userData)
+void AVLTree::PreOrderTraverse(TreeNodeHandle handle,void* userData,TreeNode* node )
 {
-   return PreOrderTraverseRecu(m_pRoot,handle,userData);
+    if(node == 0)
+        return PreOrderTraverseRecu(m_pRoot,handle,userData);
+    else
+        return PreOrderTraverseRecu(node,handle,userData);
 }
 
-void AVLTree::PostOrderTraverse(TreeNodeHandle handle,void* userData)
+void AVLTree::PostOrderTraverse(TreeNodeHandle handle,void* userData,TreeNode* node )
 {
-    return PostOrderTraverseRecu(m_pRoot,handle,userData);
+    if(node == 0)
+        return PostOrderTraverseRecu(m_pRoot,handle,userData);
+    else
+        return PostOrderTraverseRecu(node,handle,userData);
 }
 
 void AVLTree::ClearRecu(TreeNode *node)
@@ -363,5 +378,51 @@ void AVLTree::ClearRecu(TreeNode *node)
 
 void AVLTree::Clear()
 {
+
     ClearRecu(m_pRoot);
+    m_nSize = 0;
+    m_pRoot = 0;
+}
+
+size_t AVLTree::DepthRecu(TreeNode *node)
+{
+    if(node == 0)
+        return 0;
+
+    size_t left = DepthRecu(node->left);
+    size_t right = DepthRecu(node->right);
+
+    if(left > right)
+        return 1 + left;
+    else
+        return 1 + right;
+}
+
+size_t AVLTree::Depth(TreeNode *node)
+{
+    if(node == 0)
+        return DepthRecu(m_pRoot);
+    else
+        return DepthRecu(node);
+}
+
+size_t AVLTree::LeafsRecu(TreeNode *node)
+{
+    if(0 == node)
+        return 0;
+
+    if(node->left == 0 && node->right == 0)
+        return 1;
+    else
+    {
+        return LeafsRecu(node->left) + LeafsRecu(node->right);
+    }
+}
+
+size_t AVLTree::Leafs(TreeNode *node)
+{
+    if(0 == node)
+        return LeafsRecu(m_pRoot);
+    else
+        return LeafsRecu(node);
 }
