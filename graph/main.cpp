@@ -137,9 +137,43 @@ void testGraphBFS()
     cout << endl;
 }
 
+
+void testHasRing()
+{
+    Graph g;
+
+    Vertex* v1 = Graph::CreateVertex();
+    v1->data = (void*)1;
+
+    Vertex* v2 = Graph::CreateVertex();
+    v2->data = (void*)2;
+
+    Vertex* v3 = Graph::CreateVertex();
+    v3->data = (void*)3;
+
+    Vertex* v4 = Graph::CreateVertex();
+    v4->data = (void*)4;
+
+    Vertex* v5 = Graph::CreateVertex();
+    v5->data = (void*)5;
+
+    Vertex* v6 = Graph::CreateVertex();
+    v6->data = (void*)6;
+
+    g.Insert(v1,v2);
+    g.Insert(v2,v3);
+    g.Insert(v3,v4);
+    g.Insert(v4,v5);
+    g.Insert(v5,v6);
+    //g.Insert(v6,v4);
+    g.Insert(v2,v4);
+
+    cout <<"HasRing:"<<g.HasRing()<<endl;
+}
+
 int main()
 {
-    testGraphBFS();
+    testHasRing();
 
     return 0;
 }

@@ -93,6 +93,7 @@ Vertex* Graph::Insert(Vertex *v)
 
     AdjList* adj = new AdjList;
     adj->m_Vertex = v;
+    v->adjList = adj;
 
     m_AdjList.Add(adj);
     ++m_nVertexCount;
@@ -396,9 +397,13 @@ void Graph::Clear()
 
     m_AdjList.Clear();
 }
-
+/*
 AdjList* Graph::GetAdjList(Vertex *v)
 {
+    if(v == 0)
+        return 0;
+
+    return v->adjList;
     for(ListNode* node = m_AdjList.Begin(); node != m_AdjList.End(); node = node->Next())
     {
         AdjList* adj = (AdjList*)node->data;
@@ -410,7 +415,7 @@ AdjList* Graph::GetAdjList(Vertex *v)
     }
     return 0;
 }
-
+*/
 bool Graph::IsAdjacent(Vertex *v1, Vertex *v2)
 {
     if(Find(v1,v2))
@@ -448,7 +453,7 @@ void Graph::BFS(VertexHandleFunc handle, void *userData)
             if(eg == 0)
                 continue;
 
-            AdjList* vertexAdj = GetAdjList(eg->to);
+            AdjList* vertexAdj = eg->to->adjList;
 
             if(vertexAdj->m_Vertex->visit_flag == true)
                 continue;
@@ -493,7 +498,7 @@ void Graph::DFSRecu(AdjList* adj,VertexHandleFunc handle, void *userData)
     for(ListNode* node = adj->m_EdgeList.Begin(); node != adj->m_EdgeList.End(); node = node->Next())
     {
         Edge* eg = (Edge*)node->data;
-        AdjList* vertexAdj = GetAdjList(eg->to);
+        AdjList* vertexAdj = eg->to->adjList;
         if(vertexAdj == 0)
             continue;
         if(vertexAdj->m_Vertex->visit_flag == true)
@@ -515,6 +520,49 @@ void HelpInsert(void* userData,Vertex* v)
 void Graph::TopologicalSort(List &ls)
 {
     DFS(HelpInsert,(void*)&ls);
+}
+
+bool Graph::HasRing()
+{
+    for(ListNode* node = m_AdjList.Begin(); node != m_AdjList.End(); node = node->Next())
+    {
+        ClearVisitFlag();
+
+        AdjList* adj = (AdjList*)node->data;
+
+        if(adj->m_EdgeList.Size() == 0)
+            continue;
+
+        adj->m_Vertex->visit_flag = true;
+
+        for(ListNode* e = adj->m_EdgeList.Begin(); e != adj->m_EdgeList.End(); e = e->Next())
+        {
+            Edge* eg = (Edge*)e->data;
+            if(HasRingRecu(adj,eg->to->adjList))
+                return true;
+
+        }
+    }
+
+    ClearVisitFlag();
+
+    return false;
+}
+
+bool Graph::HasRingRecu(AdjList *adjBase, AdjList *adj)
+{
+    if(adjBase == adj || adj->m_Vertex->visit_flag == true)
+        return true;
+
+    if(adj->m_EdgeList.Size() == 0)
+        return false;
+
+    adj->m_Vertex->visit_flag = true;
+
+    Edge* eg = (Edge*)adj->m_EdgeList.Begin()->data;
+
+    return HasRingRecu(adjBase,eg->to->adjList);
+
 }
 
 void Graph::ClearVisitFlag()

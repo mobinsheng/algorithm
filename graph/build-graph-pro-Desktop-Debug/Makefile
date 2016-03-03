@@ -48,13 +48,11 @@ OBJECTS_DIR   = ./
 SOURCES       = ../graph.cpp \
 		../main.cpp \
 		../../list/list.cpp \
-		../../queue/queue.cpp \
-		../../stack/stack.cpp 
+		../../queue/queue.cpp 
 OBJECTS       = graph.o \
 		main.o \
 		list.o \
-		queue.o \
-		stack.o
+		queue.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/shell-unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
@@ -294,14 +292,12 @@ compiler_clean:
 
 graph.o: ../graph.cpp ../graph.h \
 		../../list/list.h \
-		../../queue/queue.h \
-		../../stack/stack.h
+		../../queue/queue.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o graph.o ../graph.cpp
 
 main.o: ../main.cpp ../graph.h \
 		../../list/list.h \
-		../../queue/queue.h \
-		../../stack/stack.h
+		../../queue/queue.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../main.cpp
 
 list.o: ../../list/list.cpp ../../list/list.h
@@ -309,9 +305,6 @@ list.o: ../../list/list.cpp ../../list/list.h
 
 queue.o: ../../queue/queue.cpp ../../queue/queue.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o queue.o ../../queue/queue.cpp
-
-stack.o: ../../stack/stack.cpp ../../stack/stack.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o stack.o ../../stack/stack.cpp
 
 ####### Install
 

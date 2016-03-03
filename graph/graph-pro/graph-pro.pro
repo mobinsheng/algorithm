@@ -7,8 +7,7 @@ SOURCES += \
     ../graph.cpp \
     ../main.cpp \
     ../../list/list.cpp \
-    ../../queue/queue.cpp \
-    ../../stack/stack.cpp
+    ../../queue/queue.cpp
 
 HEADERS += \
     ../graph.h
