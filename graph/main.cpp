@@ -130,6 +130,10 @@ void testGraphBFS()
     cout <<endl;
     cout << "DFS:" << endl;
     g.DFS(Print,0);
+
+    List ls;
+    g.TopologicalSort(ls);
+
     cout << endl;
 }
 

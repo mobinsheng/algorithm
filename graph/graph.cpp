@@ -503,6 +503,20 @@ void Graph::DFSRecu(AdjList* adj,VertexHandleFunc handle, void *userData)
 
 }
 
+void HelpInsert(void* userData,Vertex* v)
+{
+    if(userData == 0)
+        return ;
+    List* ls = (List*)userData;
+
+    ls->Add(v->data);
+}
+
+void Graph::TopologicalSort(List &ls)
+{
+    DFS(HelpInsert,(void*)&ls);
+}
+
 void Graph::ClearVisitFlag()
 {
     for(ListNode* node = m_AdjList.Begin(); node != m_AdjList.End(); node = node->Next())

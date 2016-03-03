@@ -139,6 +139,9 @@ public:
     void BFS(VertexHandleFunc handle,void* userData);
     void DFS(VertexHandleFunc handle,void* userData);
 
+    void TopologicalSort(List& ls);
+
+    void HasRing();
 private:
 
     void DFSRecu(AdjList* adj,VertexHandleFunc handle,void* userData);
