@@ -46,9 +46,11 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ../AVLTree.cpp \
-		../main.cpp 
+		../main.cpp \
+		../tree.cpp 
 OBJECTS       = AVLTree.o \
-		main.o
+		main.o \
+		tree.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/shell-unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
@@ -286,11 +288,15 @@ compiler_clean:
 
 ####### Compile
 
-AVLTree.o: ../AVLTree.cpp ../AVLTree.h
+AVLTree.o: ../AVLTree.cpp ../AVLTree.h \
+		../../stack/stack.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o AVLTree.o ../AVLTree.cpp
 
 main.o: ../main.cpp ../AVLTree.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../main.cpp
+
+tree.o: ../tree.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tree.o ../tree.cpp
 
 ####### Install
 

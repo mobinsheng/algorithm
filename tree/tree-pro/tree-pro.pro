@@ -5,8 +5,10 @@ CONFIG -= qt
 
 SOURCES += \
     ../AVLTree.cpp \
-    ../main.cpp
+    ../main.cpp \
+    ../tree.cpp
 
 HEADERS += \
-    ../AVLTree.h
+    ../AVLTree.h \
+    ../tree.h
 

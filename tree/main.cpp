@@ -18,15 +18,22 @@
 
 
 #include "AVLTree.h"
+#include "tree.h"
+
+void PrintNode(void* userData,AVLTreeNode* node)
+{
+    cout << (long)node->data << " ";
+}
+
 
 void PrintNode(void* userData,TreeNode* node)
 {
     cout << (long)node->data << " ";
 }
 
-int main(int argc, char *argv[])
-{
 
+void testAVLTree()
+{
     AVLTree t;
     /*for(int i = 5; i < 10; ++i)
         t.Insert((void*)i);
@@ -71,6 +78,62 @@ int main(int argc, char *argv[])
     t.Remove((void*)2);
     t.MidOrderTraverse(PrintNode,0);
     cout << endl;
+}
+
+void testTree()
+{
+    Tree t;
+    TreeNode* node = 0;
+    TreeNode* node0 = t.InsertLeft(node,(void*)0);
+
+    TreeNode* node1 = t.InsertLeft(node0,(void*)1);
+    TreeNode* node2 = t.InsertRight(node0,(void*)2);
+
+    TreeNode* node3 = t.InsertLeft(node1,(void*)3);
+    TreeNode* node4 = t.InsertRight(node1,(void*)4);
+
+    TreeNode* node5 = t.InsertLeft(node2,(void*)5);
+    TreeNode* node6 = t.InsertRight(node2,(void*)6);
+
+    TreeNode* node7 = t.InsertLeft(node3,(void*)7);
+    TreeNode* node8 = t.InsertRight(node3,(void*)8);
+
+    TreeNode* node9 = t.InsertLeft(node4,(void*)9);
+    TreeNode* node10 = t.InsertRight(node4,(void*)10);
+
+    TreeNode* node11 = t.InsertLeft(node5,(void*)11);
+    TreeNode* node12 = t.InsertRight(node5,(void*)12);
+
+    cout << "Size = " << t.Size() << endl;
+    t.PreOrderTraverse(PrintNode,0);
+    cout << endl;
+
+    PTreeNode parent  = 0;
+    PTreeNode nodex = t.Find((void*)10,parent);
+
+    //t.Remove(node1);
+
+    cout << "Size = " << t.Size() << endl;
+    t.PreOrderTraverse(PrintNode,0);
+    cout << endl;
+
+    //t.RemoveLeft(node2);
+
+    cout << "Size = " << t.Size() << endl;
+    t.PreOrderTraverse(PrintNode,0);
+    cout << endl;
+
+    cout << "Depth = " << t.Depth(node4) << endl;
+    cout << "Depth = " << t.Depth(t.Root()) << endl;
+
+    cout << "Leafs = " << t.Leafs(node2) << endl;
+    cout << "Leafs = " << t.Leafs() << endl;
+}
+
+int main(int argc, char *argv[])
+{
+
+    testTree();
 
 
     return 0;

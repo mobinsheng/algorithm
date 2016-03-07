@@ -39,7 +39,7 @@ AVLTree::AVLTree()
 
 }
 
-AVLTree::AVLTree(TreeDataCompareFunc compareFunc)
+AVLTree::AVLTree(AVLTreeDataCompareFunc compareFunc)
 {
 	m_nSize = 0;
 	m_pRoot = 0;
@@ -64,15 +64,15 @@ bool AVLTree::Empty()
 	return false;
 }
 
-TreeNode* AVLTree::Root()
+AVLTreeNode* AVLTree::Root()
 {
     return m_pRoot;
 }
 
-void AVLTree::RotateLeft(PTreeNode& node )
+void AVLTree::RotateLeft(PAVLTreeNode& node )
 {
-    TreeNode* left = 0;
-    TreeNode* grandchild = 0;
+    AVLTreeNode* left = 0;
+    AVLTreeNode* grandchild = 0;
     left = node->left;
     if(left->factor == left_heavy)
     {
@@ -112,10 +112,10 @@ void AVLTree::RotateLeft(PTreeNode& node )
     }
 }
 
-void AVLTree::RotateRight(PTreeNode& node)
+void AVLTree::RotateRight(PAVLTreeNode& node)
 {
-    TreeNode* right = 0;
-    TreeNode* grandchild = 0;
+    AVLTreeNode* right = 0;
+    AVLTreeNode* grandchild = 0;
 
     right = node->right;
 
@@ -158,20 +158,20 @@ void AVLTree::RotateRight(PTreeNode& node)
 
 }
 
-TreeNode* AVLTree::Insert(void* data)
+AVLTreeNode* AVLTree::Insert(void* data)
 {
     bool isbalanced = true;
     return InsertRecu(data,m_pRoot,isbalanced);
 }
 
-TreeNode* AVLTree::InsertRecu(void *data, PTreeNode &node,bool& isbalanced)
+AVLTreeNode* AVLTree::InsertRecu(void *data, PAVLTreeNode &node,bool& isbalanced)
 {
-    TreeNode* insertNode = 0;
+    AVLTreeNode* insertNode = 0;
 
     if(node == 0)
     {
         ++m_nSize;
-        insertNode = new TreeNode;
+        insertNode = new AVLTreeNode;
         insertNode->data = data;
         node = insertNode;
         return insertNode;
@@ -186,7 +186,7 @@ TreeNode* AVLTree::InsertRecu(void *data, PTreeNode &node,bool& isbalanced)
             {
                 ++m_nSize;
 
-                insertNode = new TreeNode;
+                insertNode = new AVLTreeNode;
 
                 insertNode->data = data;
 
@@ -223,7 +223,7 @@ TreeNode* AVLTree::InsertRecu(void *data, PTreeNode &node,bool& isbalanced)
             {
                 ++m_nSize;
 
-                insertNode = new TreeNode;
+                insertNode = new AVLTreeNode;
 
                 insertNode->data = data;
 
@@ -275,7 +275,7 @@ void AVLTree::Remove(void *data)
 {
     while (true)
     {
-        TreeNode* node = Find(data);
+        AVLTreeNode* node = Find(data);
 
         if(0 == node)
             break;
@@ -285,12 +285,12 @@ void AVLTree::Remove(void *data)
     }
 }
 
-TreeNode* AVLTree::Find(void *data)
+AVLTreeNode* AVLTree::Find(void *data)
 {
     return FindRecu(data,m_pRoot);
 }
 
-TreeNode* AVLTree::FindRecu(void *data, TreeNode *node)
+AVLTreeNode* AVLTree::FindRecu(void *data, AVLTreeNode *node)
 {
     if(node == 0)
         return 0;
@@ -310,7 +310,7 @@ TreeNode* AVLTree::FindRecu(void *data, TreeNode *node)
 
 }
 
-void AVLTree::MidOrderTraverseRecu(TreeNode* node,TreeNodeHandle handle,void* userData)
+void AVLTree::MidOrderTraverseRecu(AVLTreeNode* node,AVLTreeNodeHandle handle,void* userData)
 {
     if(node == 0 )
         return;
@@ -320,7 +320,7 @@ void AVLTree::MidOrderTraverseRecu(TreeNode* node,TreeNodeHandle handle,void* us
     MidOrderTraverseRecu(node->right,handle,userData);
 }
 
-void AVLTree::PreOrderTraverseRecu(TreeNode* node,TreeNodeHandle handle,void* userData)
+void AVLTree::PreOrderTraverseRecu(AVLTreeNode* node,AVLTreeNodeHandle handle,void* userData)
 {
     if(node == 0)
         return;
@@ -331,7 +331,7 @@ void AVLTree::PreOrderTraverseRecu(TreeNode* node,TreeNodeHandle handle,void* us
     PreOrderTraverseRecu(node->right,handle,userData);
 }
 
-void AVLTree::PostOrderTraverseRecu(TreeNode* node,TreeNodeHandle handle,void* userData)
+void AVLTree::PostOrderTraverseRecu(AVLTreeNode* node,AVLTreeNodeHandle handle,void* userData)
 {
     if(node == 0)
         return;
@@ -342,7 +342,7 @@ void AVLTree::PostOrderTraverseRecu(TreeNode* node,TreeNodeHandle handle,void* u
 }
 
 
-void AVLTree::MidOrderTraverse(TreeNodeHandle handle,void* userData,TreeNode* node )
+void AVLTree::MidOrderTraverse(AVLTreeNodeHandle handle,void* userData,AVLTreeNode* node )
 {
     if(node == 0)
         return MidOrderTraverseRecu(m_pRoot,handle,userData);
@@ -350,7 +350,7 @@ void AVLTree::MidOrderTraverse(TreeNodeHandle handle,void* userData,TreeNode* no
         return MidOrderTraverseRecu(node,handle,userData);
 }
 
-void AVLTree::PreOrderTraverse(TreeNodeHandle handle,void* userData,TreeNode* node )
+void AVLTree::PreOrderTraverse(AVLTreeNodeHandle handle,void* userData,AVLTreeNode* node )
 {
     if(node == 0)
         return PreOrderTraverseRecu(m_pRoot,handle,userData);
@@ -358,7 +358,7 @@ void AVLTree::PreOrderTraverse(TreeNodeHandle handle,void* userData,TreeNode* no
         return PreOrderTraverseRecu(node,handle,userData);
 }
 
-void AVLTree::PostOrderTraverse(TreeNodeHandle handle,void* userData,TreeNode* node )
+void AVLTree::PostOrderTraverse(AVLTreeNodeHandle handle,void* userData,AVLTreeNode* node )
 {
     if(node == 0)
         return PostOrderTraverseRecu(m_pRoot,handle,userData);
@@ -366,7 +366,7 @@ void AVLTree::PostOrderTraverse(TreeNodeHandle handle,void* userData,TreeNode* n
         return PostOrderTraverseRecu(node,handle,userData);
 }
 
-void AVLTree::ClearRecu(TreeNode *node)
+void AVLTree::ClearRecu(AVLTreeNode *node)
 {
     if(0 == node)
         return;
@@ -384,7 +384,7 @@ void AVLTree::Clear()
     m_pRoot = 0;
 }
 
-size_t AVLTree::DepthRecu(TreeNode *node)
+size_t AVLTree::DepthRecu(AVLTreeNode *node)
 {
     if(node == 0)
         return 0;
@@ -398,7 +398,7 @@ size_t AVLTree::DepthRecu(TreeNode *node)
         return 1 + right;
 }
 
-size_t AVLTree::Depth(TreeNode *node)
+size_t AVLTree::Depth(AVLTreeNode *node)
 {
     if(node == 0)
         return DepthRecu(m_pRoot);
@@ -406,7 +406,7 @@ size_t AVLTree::Depth(TreeNode *node)
         return DepthRecu(node);
 }
 
-size_t AVLTree::LeafsRecu(TreeNode *node)
+size_t AVLTree::LeafsRecu(AVLTreeNode *node)
 {
     if(0 == node)
         return 0;
@@ -419,7 +419,7 @@ size_t AVLTree::LeafsRecu(TreeNode *node)
     }
 }
 
-size_t AVLTree::Leafs(TreeNode *node)
+size_t AVLTree::Leafs(AVLTreeNode *node)
 {
     if(0 == node)
         return LeafsRecu(m_pRoot);
