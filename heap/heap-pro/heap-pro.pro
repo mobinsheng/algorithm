@@ -3,5 +3,14 @@ CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += main.cpp
+SOURCES += \
+    ../heap.cpp \
+    ../main.cpp \
+    ../../tree/tree.cpp \
+    ../pqueue.cpp
+
+HEADERS += \
+    ../heap.h \
+    ../../tree/tree.h \
+    ../pqueue.h
 

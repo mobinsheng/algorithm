@@ -1,0 +1,109 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AR	build-heap-pro-Desktop-Debug/Makefile	/^AR            = ar cqs$/;"	m
+BigHeap	heap.h	/^        BigHeap,$/;"	e	enum:Heap::__anon1
+CC	build-heap-pro-Desktop-Debug/Makefile	/^CC            = gcc$/;"	m
+CFLAGS	build-heap-pro-Desktop-Debug/Makefile	/^CFLAGS        = -m64 -pipe -g -Wall -W -fPIE $(DEFINES)$/;"	m
+CHK_DIR_EXISTS	build-heap-pro-Desktop-Debug/Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
+COMPRESS	build-heap-pro-Desktop-Debug/Makefile	/^COMPRESS      = gzip -9f$/;"	m
+COPY	build-heap-pro-Desktop-Debug/Makefile	/^COPY          = cp -f$/;"	m
+COPY_DIR	build-heap-pro-Desktop-Debug/Makefile	/^COPY_DIR      = cp -f -R$/;"	m
+COPY_FILE	build-heap-pro-Desktop-Debug/Makefile	/^COPY_FILE     = cp -f$/;"	m
+CXX	build-heap-pro-Desktop-Debug/Makefile	/^CXX           = g++$/;"	m
+CXXFLAGS	build-heap-pro-Desktop-Debug/Makefile	/^CXXFLAGS      = -m64 -pipe -g -Wall -W -fPIE $(DEFINES)$/;"	m
+DEFINES	build-heap-pro-Desktop-Debug/Makefile	/^DEFINES       = -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG$/;"	m
+DEL_DIR	build-heap-pro-Desktop-Debug/Makefile	/^DEL_DIR       = rmdir$/;"	m
+DEL_FILE	build-heap-pro-Desktop-Debug/Makefile	/^DEL_FILE      = rm -f$/;"	m
+DESTDIR	build-heap-pro-Desktop-Debug/Makefile	/^DESTDIR       = #avoid trailing-slash linebreak$/;"	m
+DIST	build-heap-pro-Desktop-Debug/Makefile	/^DIST          = \/usr\/lib\/x86_64-linux-gnu\/qt5\/mkspecs\/features\/spec_pre.prf \\$/;"	m
+DefaultHeapDataCompareFunc	heap.cpp	/^int DefaultHeapDataCompareFunc(void* data1,void* data2)$/;"	f	signature:(void* data1,void* data2)
+Empty	heap.cpp	/^bool Heap::Empty()$/;"	f	class:Heap	signature:()
+Empty	heap.h	/^    bool Empty();$/;"	p	class:Heap	access:public	signature:()
+HasLeft	heap.cpp	/^bool Heap::HasLeft(size_t i)$/;"	f	class:Heap	signature:(size_t i)
+HasLeft	heap.h	/^    bool HasLeft(size_t i);$/;"	p	class:Heap	access:private	signature:(size_t i)
+HasRight	heap.cpp	/^bool Heap::HasRight(size_t i)$/;"	f	class:Heap	signature:(size_t i)
+HasRight	heap.h	/^    bool HasRight(size_t i);$/;"	p	class:Heap	access:private	signature:(size_t i)
+Heap	heap.cpp	/^Heap::Heap(int type)$/;"	f	class:Heap	signature:(int type)
+Heap	heap.cpp	/^Heap::Heap(int type,HeapDataCompareFunc compare)$/;"	f	class:Heap	signature:(int type,HeapDataCompareFunc compare)
+Heap	heap.h	/^    Heap(int type);$/;"	p	class:Heap	access:public	signature:(int type)
+Heap	heap.h	/^    Heap(int type,HeapDataCompareFunc compare);$/;"	p	class:Heap	access:public	signature:(int type,HeapDataCompareFunc compare)
+Heap	heap.h	/^class Heap$/;"	c
+Heap::BigHeap	heap.h	/^        BigHeap,$/;"	e	enum:Heap::__anon1
+Heap::Empty	heap.cpp	/^bool Heap::Empty()$/;"	f	class:Heap	signature:()
+Heap::Empty	heap.h	/^    bool Empty();$/;"	p	class:Heap	access:public	signature:()
+Heap::HasLeft	heap.cpp	/^bool Heap::HasLeft(size_t i)$/;"	f	class:Heap	signature:(size_t i)
+Heap::HasLeft	heap.h	/^    bool HasLeft(size_t i);$/;"	p	class:Heap	access:private	signature:(size_t i)
+Heap::HasRight	heap.cpp	/^bool Heap::HasRight(size_t i)$/;"	f	class:Heap	signature:(size_t i)
+Heap::HasRight	heap.h	/^    bool HasRight(size_t i);$/;"	p	class:Heap	access:private	signature:(size_t i)
+Heap::Heap	heap.cpp	/^Heap::Heap(int type)$/;"	f	class:Heap	signature:(int type)
+Heap::Heap	heap.cpp	/^Heap::Heap(int type,HeapDataCompareFunc compare)$/;"	f	class:Heap	signature:(int type,HeapDataCompareFunc compare)
+Heap::Heap	heap.h	/^    Heap(int type);$/;"	p	class:Heap	access:public	signature:(int type)
+Heap::Heap	heap.h	/^    Heap(int type,HeapDataCompareFunc compare);$/;"	p	class:Heap	access:public	signature:(int type,HeapDataCompareFunc compare)
+Heap::Insert	heap.cpp	/^void Heap::Insert(void *data)$/;"	f	class:Heap	signature:(void *data)
+Heap::Insert	heap.h	/^    void Insert(void* data);$/;"	p	class:Heap	access:public	signature:(void* data)
+Heap::Pop	heap.cpp	/^void* Heap::Pop()$/;"	f	class:Heap	signature:()
+Heap::Pop	heap.h	/^    void* Pop();$/;"	p	class:Heap	access:public	signature:()
+Heap::ReBuild4Delete	heap.cpp	/^void Heap::ReBuild4Delete()$/;"	f	class:Heap	signature:()
+Heap::ReBuild4Delete	heap.h	/^    void ReBuild4Delete();$/;"	p	class:Heap	access:private	signature:()
+Heap::ReBuild4Insert	heap.cpp	/^void Heap::ReBuild4Insert()$/;"	f	class:Heap	signature:()
+Heap::ReBuild4Insert	heap.h	/^    void ReBuild4Insert();$/;"	p	class:Heap	access:private	signature:()
+Heap::Size	heap.cpp	/^size_t Heap::Size()$/;"	f	class:Heap	signature:()
+Heap::Size	heap.h	/^    size_t Size();$/;"	p	class:Heap	access:public	signature:()
+Heap::SmallHeap	heap.h	/^        SmallHeap$/;"	e	enum:Heap::__anon1
+Heap::Top	heap.cpp	/^void* Heap::Top()$/;"	f	class:Heap	signature:()
+Heap::Top	heap.h	/^    void* Top();$/;"	p	class:Heap	access:public	signature:()
+Heap::m_Array	heap.h	/^    void** m_Array;$/;"	m	class:Heap	access:private
+Heap::m_CompareFunc	heap.h	/^    HeapDataCompareFunc m_CompareFunc;$/;"	m	class:Heap	access:private
+Heap::m_nArrayCapacity	heap.h	/^    size_t m_nArrayCapacity;$/;"	m	class:Heap	access:private
+Heap::m_nArraySize	heap.h	/^    size_t m_nArraySize;$/;"	m	class:Heap	access:private
+Heap::m_nType	heap.h	/^    int m_nType;$/;"	m	class:Heap	access:private
+Heap::~Heap	heap.cpp	/^Heap::~Heap()$/;"	f	class:Heap	signature:()
+Heap::~Heap	heap.h	/^    ~Heap();$/;"	p	class:Heap	access:public	signature:()
+HeapDataCompareFunc	heap.h	/^typedef int (*HeapDataCompareFunc)(void* data1,void* data2);$/;"	t
+INCPATH	build-heap-pro-Desktop-Debug/Makefile	/^INCPATH       = -I\/usr\/lib\/x86_64-linux-gnu\/qt5\/mkspecs\/linux-g++-64 -I..\/heap-pro -I.$/;"	m
+INSTALL_DIR	build-heap-pro-Desktop-Debug/Makefile	/^INSTALL_DIR   = $(COPY_DIR)$/;"	m
+INSTALL_FILE	build-heap-pro-Desktop-Debug/Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
+INSTALL_PROGRAM	build-heap-pro-Desktop-Debug/Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
+Insert	heap.cpp	/^void Heap::Insert(void *data)$/;"	f	class:Heap	signature:(void *data)
+Insert	heap.h	/^    void Insert(void* data);$/;"	p	class:Heap	access:public	signature:(void* data)
+LFLAGS	build-heap-pro-Desktop-Debug/Makefile	/^LFLAGS        = -m64$/;"	m
+LIBS	build-heap-pro-Desktop-Debug/Makefile	/^LIBS          = $(SUBLIBS)  $/;"	m
+LINK	build-heap-pro-Desktop-Debug/Makefile	/^LINK          = g++$/;"	m
+MAKEFILE	build-heap-pro-Desktop-Debug/Makefile	/^MAKEFILE      = Makefile$/;"	m
+MKDIR	build-heap-pro-Desktop-Debug/Makefile	/^MKDIR         = mkdir -p$/;"	m
+MOVE	build-heap-pro-Desktop-Debug/Makefile	/^MOVE          = mv -f$/;"	m
+OBJECTS	build-heap-pro-Desktop-Debug/Makefile	/^OBJECTS       = heap.o \\$/;"	m
+OBJECTS_DIR	build-heap-pro-Desktop-Debug/Makefile	/^OBJECTS_DIR   = .\/$/;"	m
+Pop	heap.cpp	/^void* Heap::Pop()$/;"	f	class:Heap	signature:()
+Pop	heap.h	/^    void* Pop();$/;"	p	class:Heap	access:public	signature:()
+QMAKE	build-heap-pro-Desktop-Debug/Makefile	/^QMAKE         = \/usr\/lib\/x86_64-linux-gnu\/qt5\/bin\/qmake$/;"	m
+QMAKE_TARGET	build-heap-pro-Desktop-Debug/Makefile	/^QMAKE_TARGET  = heap-pro$/;"	m
+RANLIB	build-heap-pro-Desktop-Debug/Makefile	/^RANLIB        = $/;"	m
+ReBuild4Delete	heap.cpp	/^void Heap::ReBuild4Delete()$/;"	f	class:Heap	signature:()
+ReBuild4Delete	heap.h	/^    void ReBuild4Delete();$/;"	p	class:Heap	access:private	signature:()
+ReBuild4Insert	heap.cpp	/^void Heap::ReBuild4Insert()$/;"	f	class:Heap	signature:()
+ReBuild4Insert	heap.h	/^    void ReBuild4Insert();$/;"	p	class:Heap	access:private	signature:()
+SED	build-heap-pro-Desktop-Debug/Makefile	/^SED           = sed$/;"	m
+SOURCES	build-heap-pro-Desktop-Debug/Makefile	/^SOURCES       = ..\/heap.cpp \\$/;"	m
+STRIP	build-heap-pro-Desktop-Debug/Makefile	/^STRIP         = strip$/;"	m
+SYMLINK	build-heap-pro-Desktop-Debug/Makefile	/^SYMLINK       = ln -f -s$/;"	m
+Size	heap.cpp	/^size_t Heap::Size()$/;"	f	class:Heap	signature:()
+Size	heap.h	/^    size_t Size();$/;"	p	class:Heap	access:public	signature:()
+SmallHeap	heap.h	/^        SmallHeap$/;"	e	enum:Heap::__anon1
+TAR	build-heap-pro-Desktop-Debug/Makefile	/^TAR           = tar -cf$/;"	m
+TARGET	build-heap-pro-Desktop-Debug/Makefile	/^TARGET        = heap-pro$/;"	m
+Top	heap.cpp	/^void* Heap::Top()$/;"	f	class:Heap	signature:()
+Top	heap.h	/^    void* Top();$/;"	p	class:Heap	access:public	signature:()
+_HEAP_H_	heap.h	20;"	d
+m_Array	heap.h	/^    void** m_Array;$/;"	m	class:Heap	access:private
+m_CompareFunc	heap.h	/^    HeapDataCompareFunc m_CompareFunc;$/;"	m	class:Heap	access:private
+m_nArrayCapacity	heap.h	/^    size_t m_nArrayCapacity;$/;"	m	class:Heap	access:private
+m_nArraySize	heap.h	/^    size_t m_nArraySize;$/;"	m	class:Heap	access:private
+m_nType	heap.h	/^    int m_nType;$/;"	m	class:Heap	access:private
+main	main.cpp	/^int main()$/;"	f	signature:()
+~Heap	heap.cpp	/^Heap::~Heap()$/;"	f	class:Heap	signature:()
+~Heap	heap.h	/^    ~Heap();$/;"	p	class:Heap	access:public	signature:()

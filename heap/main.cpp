@@ -18,10 +18,9 @@
 
 
 #include "heap.h"
+#include "pqueue.h"
 
-
-
-int main()
+void testHeap()
 {
     Heap heap(Heap::BigHeap);
 
@@ -46,5 +45,38 @@ int main()
         long i = (long)heap.Pop();
         cout << i << endl;
     }
+}
+
+void testPQueue()
+{
+    PQueue Q;
+
+
+    for(int i = 0 ; i < 6 ; ++i)
+    {
+        Q.EnQueue((void*)i);
+    }
+
+    for(int i = 10; i >= 6; --i)
+    {
+        Q.EnQueue((void*)i);
+    }
+
+
+    for(int i = 7; i < 20; ++i)
+    {
+        Q.EnQueue((void*)i);
+    }
+    while(Q.Size() > 0)
+    {
+        long i = (long)Q.Front();
+        Q.DeQueue();
+        cout << i << endl;
+    }
+}
+
+int main()
+{
+    testPQueue();
     return 0;
 }

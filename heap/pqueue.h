@@ -23,6 +23,16 @@
 
 class PQueue
 {
+public:
+    PQueue(HeapDataCompareFunc compareFunc = 0);
+    ~PQueue();
 
+    void EnQueue(void* data);
+    void* DeQueue();
+    size_t Size();
+    void* Front();
+    bool Empty();
+private:
+    Heap* m_pQueue;
 };
 #endif

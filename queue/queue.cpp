@@ -45,6 +45,15 @@ void* Queue::DeQueue()
 	if(m_pHead == 0)
 		return 0;
 
+    if(m_pHead == m_pTail)
+    {
+        void* data = m_pHead->data;
+        delete m_pHead;
+        m_pHead = m_pTail = 0;
+        m_nSize = 0;
+        return data;
+    }
+
 	QueueNode* node = m_pHead;
 
 	m_pHead = m_pHead->next;
