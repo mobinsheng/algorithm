@@ -169,7 +169,7 @@ void merge(void** array,int i,int mid,int j,SortCompareFunc compareFunc)
     delete[] temp;
 }
 
-int mgsort_main(void** array,int i,int j,SortCompareFunc compareFunc)
+void mgsort_main(void** array,int i,int j,SortCompareFunc compareFunc)
 {
     int k = (i + j ) / 2;
     if(i < j)
@@ -189,7 +189,63 @@ void mgsort(void** array,size_t len,SortCompareFunc compareFunc)
 // 计数排序
 void ctsort(void** array,size_t len,SortCompareFunc compareFunc)
 {
+    if(array == 0 || len <= 0)
+        return;
 
+    long maxNum = (long)array[0];
+
+    long value = 0;
+
+    // 选取数组中的最大值
+    for(size_t i = 1; i < len ;++i)
+    {
+        value = (long)array[i];
+        if(value> maxNum)
+            maxNum = value;
+    }
+
+    // 建立索引数组
+    long* indexArray = new long[maxNum + 1];
+    memset(indexArray,0,(1+maxNum) * sizeof(long));
+
+    // 记录每一个数出现的次数
+    // 索引数组的下标就是这个数，而对应的元素值就是这个值出现的次数
+    // 这意味着数值最小的数的统计信息在最左边
+    // 而数值最大的数的统计信息出现在最右边
+    // 所有的数的统计信息相加就是源数组的元素数目
+    for(size_t i =0 ;i < len; ++i)
+    {
+        value = (long)array[i];
+        indexArray[value]++;
+    }
+
+    // 这个循环之后，索引数组中实际存放了某个数排序之后在数组中的索引
+    // 例如num这个数排序之后的索引就是indexArray[num]
+    for(int i = 1; i < maxNum + 1; ++i)
+    {
+        indexArray[i] = indexArray[i - 1] + indexArray[i];
+    }
+
+    void** tempArray = new void*[len];
+
+    // 进行排序处理
+    for(int i = len - 1; i >= 0; --i)
+    {
+        // 元素值
+        value = (long)array[i];
+        // 元素值的排序好之后的索引
+        int indexOfValue = indexArray[value];
+        // 放在准确的位置
+        tempArray[indexOfValue - 1] = (void*)value;
+        // 这里减一的目的是有些元素值可能相同
+        // 所以减去1就表示重复的元素依次往前排
+        indexArray[value] = indexArray[value] - 1;
+    }
+
+    memcpy(array,tempArray,sizeof(void*) * len);
+
+    delete[] tempArray;
+    delete[] indexArray;
 }
 
 // 基数排序

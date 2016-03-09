@@ -85,9 +85,9 @@ int main()
           (void*)9
     };
 
-    mgsort(array,len,compare);
-    mgsort(array2,len,compare);
-    mgsort(array3,len,compare);
+    ctsort(array,len,compare);
+    ctsort(array2,len,compare);
+    ctsort(array3,len,compare);
     PrintArray(array,len);
     PrintArray(array2,len);
     PrintArray(array3,len);
