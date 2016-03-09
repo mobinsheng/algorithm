@@ -51,10 +51,12 @@ int partition(void** array,int i,int j,SortCompareFunc compareFunc)
     if(array == 0 || i >= j || i <0 || j < 0 || compareFunc == 0)
         return -1;
 
+    // 取中间索引
     int mid = (i + j ) / 2;
 
     while(i < j)
     {
+        // 从右到左，找到第一个比中间点小的元素
         while(j >= mid)
         {
             if(compareFunc(array[j],array[mid]) > 0)
@@ -63,6 +65,7 @@ int partition(void** array,int i,int j,SortCompareFunc compareFunc)
                 break;
         }
 
+        // 从左到右，找到第一个比中间点大的元素
         while(i <= mid)
         {
             if(compareFunc(array[i],array[mid]) < 0)
@@ -74,6 +77,7 @@ int partition(void** array,int i,int j,SortCompareFunc compareFunc)
         if(i == j)
             break;
 
+        // 交换两个元素的值
         void* temp = array[i];
         array[i] = array[j];
         array[j] = temp;
@@ -121,8 +125,6 @@ void merge(void** array,int i,int mid,int j,SortCompareFunc compareFunc)
 
     if(i > mid || mid > j || i > j)
         return ;
-
-
 
     void** temp = new void*[j - i + 1];
 
