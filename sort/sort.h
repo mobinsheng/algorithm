@@ -18,6 +18,15 @@
 
 #ifndef _MY_SORT_H_
 #define _MY_SORT_H_
+
+#include <stdlib.h>
+#include <string.h>
+#include <memory.h>
+#include <iostream>
+#include <string>
+using namespace std;
+typedef int (*SortCompareFunc)(void* data1,void* data2);
+
 // 插入排序
 void issort(void** array,size_t len,SortCompareFunc compareFunc);
 
