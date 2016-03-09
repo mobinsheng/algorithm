@@ -17,6 +17,7 @@
  */
 
 #include "sort.h"
+#include <math.h>
 
 // 插入排序
 void issort(void** array,size_t len,SortCompareFunc compareFunc)
@@ -251,5 +252,67 @@ void ctsort(void** array,size_t len,SortCompareFunc compareFunc)
 // 基数排序
 void rxsort(void** array,size_t len,SortCompareFunc compareFunc)
 {
+    if(array == 0 || len <= 0)
+        return ;
 
+    // 临时数组
+    void** tempArray = new void*[len];
+
+
+    // 得到数组的最大值
+    long maxNum = (long)array[0];
+    for( int i = 0 ; i < len; ++i)
+    {
+        if(maxNum < (long)array[i])
+            maxNum = (long)array[i];
+    }
+
+    // 根据最大值计算位数（例如199是三位数）
+    int count = 0;
+    while(maxNum != 0)
+    {
+        ++count;
+        maxNum /= 10;
+    }
+
+    // 索引数组，用于计数排序
+    int* indexArray = new int[10];
+
+    // 对每一位进行计数排序
+    for(int i = 0 ; i < count; ++i)
+    {
+        // 清空索引数组
+        for(int i = 0; i < 10; ++i)
+            indexArray[i] = 0;
+
+        // 当前进行到1,10,100,1000……中的哪一个级别
+        long pvalue = pow(10,i);
+
+        // 得到整个数组某一位的统计信息
+        for(int j = 0; j <len; ++j)
+        {
+            // 得到某个数第i位的数值
+            int index = ((long)array[j] / pvalue) % 10;
+
+            // 统计信息
+            indexArray[index]++;
+        }
+
+        // 得到排序后的索引位置
+        for(int j = 1; j < 10; ++j)
+            indexArray[j] += indexArray[j - 1];
+
+        // 进行排序
+        for(int j = len - 1; j >=0; --j)
+        {
+            int index = ((long)array[j] / pvalue) % 10;
+            tempArray[indexArray[index] - 1] = array[j];
+            indexArray[index]--;
+        }
+
+        memcpy(array,tempArray,sizeof(long)* len);
+    }
+
+    delete[] tempArray;
+    delete[] indexArray;
 }
