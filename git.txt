@@ -1,0 +1,14 @@
+现在git上建立一个Repositories，然后再本地执行下面的操作：
+git init
+git add *.cpp *.h
+git commit -m "note"
+git remote add origin git@github.com:mobinsheng/xx.git
+git push origin +master
+===========================
+在另外一个地方修改代码：
+建立一个同名文件夹
+进入文件夹，执行git init
+把项目迁出来，在当前文件夹下执行下面命令：
+git pull git@github.com:mobinsheng/algorithm.git
+牵出来之后要和原始的关联：
+git remote add origin git@github.com:mobinsheng/algorithm.git
